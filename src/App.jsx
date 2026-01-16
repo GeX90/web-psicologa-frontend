@@ -5,6 +5,7 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import IsPrivate from "./components/IsPrivate";
 import IsAnon from "./components/IsAnon";
+import CitasPage from "./pages/CitasPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
  
         <Route path="/signup" element={<IsAnon> <SignupPage /> </IsAnon>} />
         <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} />
+        <Route path="/citaspage" element={<IsPrivate> <CitasPage/> </IsPrivate>} />
       </Routes>
     </div>
   );
