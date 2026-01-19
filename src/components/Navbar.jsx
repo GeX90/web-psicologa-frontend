@@ -33,6 +33,10 @@ function Navbar() {
             <Link to="/crear-cita">
               <button>Pedir Cita</button>
             </Link>
+
+            <Link to="/editar-citas">
+              <button>Editar Cita</button>
+            </Link>
             
             <button onClick={logOutUser}>Logout</button>
             <span>{user && user.name}</span>

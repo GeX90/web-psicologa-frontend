@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
 const API_URL = "http://localhost:5005";
@@ -61,11 +62,13 @@ function CitasPage() {
             <h1>Número de Citas: {citas.length}</h1>
             {citas.map((elm, i, arr) => {
                 return (
-                    <div className="card" key={i}>
-                        <p>{formatFecha(elm.fecha)}</p>
-                        <p>{elm.hora}</p>
-                        <p>{elm.motivo}</p>
-                    </div>
+                    <Link to={`/citas/${elm._id}`} key={elm._id} style={{ textDecoration: "none", color: "inherit" }}>
+                        <div className="card" style={{ cursor: "pointer" }}>
+                            <p>{formatFecha(elm.fecha)}</p>
+                            <p>{elm.hora}</p>
+                            <p>{elm.motivo}</p>
+                        </div>
+                    </Link>
                 );
             })}
         </div>
