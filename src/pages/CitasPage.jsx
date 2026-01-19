@@ -10,6 +10,16 @@ function CitasPage() {
     const [citas, setCitas] = useState(null);
     const [error, setError] = useState(null);
 
+    const formatFecha = (fecha) => {
+        const date = new Date(fecha);
+        return date.toLocaleDateString('es-ES', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    };
+
     useEffect(() => {
         if (isLoading) return;
         if (!isLoggedIn || !user) return;
@@ -52,7 +62,7 @@ function CitasPage() {
             {citas.map((elm, i, arr) => {
                 return (
                     <div className="card" key={i}>
-                        <p>{elm.fecha}</p>
+                        <p>{formatFecha(elm.fecha)}</p>
                         <p>{elm.hora}</p>
                         <p>{elm.motivo}</p>
                     </div>
