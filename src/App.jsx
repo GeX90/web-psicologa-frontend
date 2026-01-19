@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import IsPrivate from "./components/IsPrivate";
 import IsAnon from "./components/IsAnon";
 import CitasPage from "./pages/CitasPage";
+import CreateCitasPage from "./pages/CreateCitasPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<IsAnon> <SignupPage /> </IsAnon>} />
         <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} />
         <Route path="/citas" element={<IsPrivate> <CitasPage/> </IsPrivate>} />
+        <Route path="/crear-cita" element={<IsPrivate> <CreateCitasPage /> </IsPrivate>} />
       </Routes>
     </div>
   );
