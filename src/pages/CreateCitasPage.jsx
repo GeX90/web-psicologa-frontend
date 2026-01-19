@@ -20,7 +20,6 @@ function CreateCitasPage() {
         if (isLoading) return;
         
         if (!isLoggedIn) {
-            // Redirigir al login si no está logeado
             navigate("/login");
             return;
         }
@@ -50,9 +49,7 @@ function CreateCitasPage() {
             );
 
             console.log("Cita creada:", response.data);
-            // Limpiar el formulario
             setFormData({ fecha: "", hora: "", motivo: "" });
-            // Redirigir a la página de citas
             navigate("/citas");
         } catch (err) {
             console.error("Error creating cita:", err.response?.data || err.message);

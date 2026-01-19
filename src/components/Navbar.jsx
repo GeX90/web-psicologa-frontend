@@ -20,7 +20,10 @@ function Navbar() {
           <Link to="/citas">
             <button>Citas</button>
           </Link>
-        
+
+          <Link to="/crear-cita">
+            <button>Pedir Cita</button>
+          </Link>
           
           <button onClick={logOutUser}>Logout</button>
           <span>{user && user.name}</span>
@@ -29,6 +32,9 @@ function Navbar() {
 
       {!isLoggedIn && (
         <>
+          <Link to="/signup">
+            <button>Pedir Cita</button>
+          </Link>
           <Link to="/signup"> <button>Sign Up</button> </Link>
           <Link to="/login"> <button>Login</button> </Link>
         </>

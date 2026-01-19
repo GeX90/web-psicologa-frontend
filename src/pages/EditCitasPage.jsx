@@ -63,7 +63,7 @@ function EditCitasPage() {
     const handleEditClick = (cita) => {
         setEditingId(cita._id);
         setFormData({
-            fecha: cita.fecha.split('T')[0], // Formato YYYY-MM-DD
+            fecha: cita.fecha.split('T')[0], 
             hora: cita.hora,
             motivo: cita.motivo
         });
@@ -91,7 +91,6 @@ function EditCitasPage() {
                 }
             );
 
-            // Actualizar la lista de citas
             const updatedCitas = citas.map((cita) => 
                 cita._id === citaId 
                     ? { ...cita, ...formData, fecha: new Date(formData.fecha).toISOString() }
@@ -121,7 +120,6 @@ function EditCitasPage() {
                     }
                 );
 
-                // Eliminar de la lista de citas
                 setCitas(citas.filter((cita) => cita._id !== citaId));
             } catch (err) {
                 console.error("Error deleting cita:", err.response?.data || err.message);
