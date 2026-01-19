@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { AuthContext } from "../context/auth.context";
 import "./Calendar.css";
 
 const API_URL = "http://localhost:5005";
@@ -8,6 +10,8 @@ function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [availableDates, setAvailableDates] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { isLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Obtener fechas disponibles del backend
@@ -55,6 +59,21 @@ function Calendar() {
     return availableDates.includes(dateStr);
   };
 
+  const handleDayClick = (day) => {
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const dayStr = String(day).padStart(2, '0');
+    const selectedDate = `${year}-${month}-${dayStr}`;
+
+    if (isLoggedIn) {
+      // Si está loggeado, ir a crear cita con la fecha seleccionada
+      navigate('/crear-cita', { state: { selectedDate } });
+    } else {
+      // Si no está loggeado, ir a login (desde ahí pueden ir a signup)
+      navigate('/login');
+    }
+  };
+
   const previousMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
   };
@@ -79,7 +98,8 @@ function Calendar() {
         <div
           key={day}
           className={`calendar-day ${available ? 'available' : ''}`}
-          title={available ? 'Cita disponible' : 'No disponible'}
+          title={available ? 'Click para pedir cita' : 'No disponible'}
+          onClick={() => available && handleDayClick(day)}
         >
           {day}
         </div>

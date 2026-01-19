@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import Loader from "../components/Loader";
 import "./CreateCitasPage.css";
@@ -10,6 +10,7 @@ const API_URL = "http://localhost:5005";
 function CreateCitasPage() {
     const { user, isLoggedIn, isLoading } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
     const [formData, setFormData] = useState({
         fecha: "",
         hora: "",
@@ -17,6 +18,7 @@ function CreateCitasPage() {
     });
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [existingCitas, setExistingCitas] = useState([]);
 
     useEffect(() => {
         if (isLoading) return;
@@ -25,7 +27,28 @@ function CreateCitasPage() {
             navigate("/login");
             return;
         }
-    }, [isLoggedIn, isLoading, navigate]);
+
+        // Si viene una fecha seleccionada del calendario, prellenarla
+        if (location.state?.selectedDate) {
+            setFormData(prev => ({
+                ...prev,
+                fecha: location.state.selectedDate
+            }));
+        }
+
+        // Obtener citas existentes para validación
+        const storedToken = localStorage.getItem('authToken');
+        axios
+            .get(`${API_URL}/api/citas`, {
+                headers: { Authorization: `Bearer ${storedToken}` }
+            })
+            .then((response) => {
+                setExistingCitas(response.data);
+            })
+            .catch((err) => {
+                console.error("Error obteniendo citas:", err);
+            });
+    }, [isLoggedIn, isLoading, navigate, location.state]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -39,6 +62,18 @@ function CreateCitasPage() {
         e.preventDefault();
         setLoading(true);
         setError(null);
+
+        // Validar que no exista una cita en la misma fecha y hora
+        const citaDuplicada = existingCitas.find((cita) => {
+            const citaFecha = new Date(cita.fecha).toISOString().split('T')[0];
+            return citaFecha === formData.fecha && cita.hora === formData.hora;
+        });
+
+        if (citaDuplicada) {
+            setError("Ya existe una cita programada para esta fecha y hora. Por favor, selecciona otro horario.");
+            setLoading(false);
+            return;
+        }
 
         try {
             const storedToken = localStorage.getItem('authToken');
