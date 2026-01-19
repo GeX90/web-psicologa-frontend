@@ -12,9 +12,12 @@ function Navbar() {
 
   return (
     <nav>
-      <Link to="/" className="navbar-logo">
-        <img src="/icononeuroespacio.jpg" alt="Neuro Espacio Logo" />
-      </Link>
+      <div className="navbar-brand">
+        <Link to="/" className="navbar-logo">
+          <img src="/icononeuroespacio.png" alt="Neuro Espacio Logo" />
+        </Link>
+        <span className="navbar-title">NEURO ESPACIO</span>
+      </div>
 
       <div className="navbar-buttons">
         <Link to="/">

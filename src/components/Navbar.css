@@ -1,13 +1,23 @@
 nav {
-    background-image: url('/psicoimg2.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: white;
     padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     min-height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .navbar-logo img {
@@ -15,6 +25,22 @@ nav {
     width: auto;
     cursor: pointer;
     border-radius: 5px;
+    border: 3px solid rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-logo img:hover {
+    border: 3px solid rgba(139, 69, 19, 0.6);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.navbar-title {
+    color: #8B4513;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .navbar-buttons {
@@ -30,7 +56,8 @@ nav a {
 }
 
 nav button {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #8B4513;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -38,16 +65,17 @@ nav button {
     font-weight: bold;
     font-size: 14px;
     white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 nav button:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #A0522D;
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
 }
 
 nav span {
-    color: white;
+    color: #8B4513;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     padding: 0 15px;
     font-size: 14px;
 }
@@ -61,6 +89,10 @@ nav span {
 
     .navbar-logo img {
         height: 50px;
+    }
+
+    .navbar-title {
+        font-size: 1.2rem;
     }
 
     .navbar-buttons {
@@ -89,6 +121,11 @@ nav span {
 
     .navbar-logo img {
         height: 45px;
+    }
+
+    .navbar-title {
+        font-size: 1rem;
+        display: none;
     }
 
     .navbar-buttons {

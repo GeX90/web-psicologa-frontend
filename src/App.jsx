@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
@@ -25,6 +26,8 @@ function App() {
         <Route path="/editar-citas" element={<IsPrivate> <EditCitasPage /> </IsPrivate>} />
         <Route path="/about" element={<AboutUsPage />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
