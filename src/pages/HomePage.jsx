@@ -20,12 +20,6 @@ function HomePage() {
                             Conoce más
                         </Link>
                     </div>
-
-                    <p className="home-description">
-                        Ofrecemos servicios profesionales de terapia individual, familiar y de pareja. 
-                        Nuestro equipo especializado te acompañará en tu proceso de crecimiento personal 
-                        y salud mental. Comienza tu camino hacia el bienestar.
-                    </p>
                 </div>
 
                 <div className="professional-section">
