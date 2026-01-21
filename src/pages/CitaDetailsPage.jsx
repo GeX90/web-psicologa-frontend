@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth.context";
 import Loader from "../components/Loader";
 import "./CitaDetailsPage.css";
 
-const API_URL = "http://localhost:5005";
+const API_URL = import.meta.env.VITE_API_URL
 
 function CitaDetailsPage() {
   const { id } = useParams();
