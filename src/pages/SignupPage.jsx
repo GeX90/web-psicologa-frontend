@@ -81,12 +81,19 @@ function SignupPage(props) {
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  fontSize: '18px',
-                  padding: '5px'
+                  fontSize: '12px',
+                  padding: '0',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '100%',
+                  top: '0',
+                  color: '#666',
+                  fontWeight: '500'
                 }}
                 aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
               >
-                {showPassword ? '🙈' : '👁️'}
+                {showPassword ? 'Ocultar' : 'Mostrar'}
               </button>
             </div>
 
