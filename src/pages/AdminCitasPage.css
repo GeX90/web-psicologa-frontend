@@ -1,0 +1,255 @@
+.admin-citas-container {
+  min-height: calc(100vh - 140px);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5ede1 0%, #e8dcc9 100%);
+}
+
+.admin-citas-container h1 {
+  text-align: center;
+  color: #615338;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.admin-citas-container .subtitle {
+  text-align: center;
+  color: #7e3805;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.admin-citas-container > p {
+  text-align: center;
+  color: #615338;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.admin-citas-container .error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-info {
+  background: #f5ede1;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border-left: 4px solid #615338;
+}
+
+.user-info p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.citas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cita-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cita-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cita-card h3 {
+  color: #615338;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e0d5c7;
+  padding-bottom: 12px;
+}
+
+.cita-info {
+  margin: 16px 0;
+}
+
+.cita-info p {
+  color: #333;
+  font-size: 1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cita-info strong {
+  color: #615338;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.edit-form {
+  margin-top: 20px;
+}
+
+.edit-form h3 {
+  color: #7e3805;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #615338;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 16px;
+  margin: 0;
+  border: 2px solid #e0d5c7;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #615338;
+  box-shadow: 0 0 0 3px rgba(97, 83, 56, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.cita-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.cita-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #615338 0%, #7e3805 100%);
+  color: white;
+}
+
+.btn-save:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(97, 83, 56, 0.3);
+}
+
+.btn-cancel {
+  background: white;
+  color: #615338;
+  border: 2px solid #615338 !important;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #f5ede1;
+}
+
+.btn-edit {
+  background: #7e3805;
+  color: white;
+}
+
+.btn-edit:hover:not(:disabled) {
+  background: #A0522D;
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .admin-citas-container {
+    padding: 30px 15px;
+  }
+
+  .admin-citas-container h1 {
+    font-size: 2rem;
+  }
+
+  .cita-card {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .cita-card button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-citas-container {
+    padding: 20px 10px;
+  }
+
+  .admin-citas-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .cita-card {
+    padding: 16px;
+  }
+
+  .cita-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .cita-info strong {
+    min-width: 80px;
+    font-size: 0.95rem;
+  }
+}

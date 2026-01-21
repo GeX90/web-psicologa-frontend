@@ -24,17 +24,33 @@ function Navbar() {
         
         {isLoggedIn && (
           <>
-            <Link to="/citas">
-              <button>Citas</button>
-            </Link>
+            {user?.isAdmin ? (
+              // Opciones para Admin
+              <>
+                <Link to="/admin/users">
+                  <button>Usuarios</button>
+                </Link>
 
-            <Link to="/crear-cita">
-              <button>Pedir Cita</button>
-            </Link>
+                <Link to="/admin/citas">
+                  <button>Todas las Citas</button>
+                </Link>
+              </>
+            ) : (
+              // Opciones para Usuario normal
+              <>
+                <Link to="/citas">
+                  <button>Citas</button>
+                </Link>
 
-            <Link to="/editar-citas">
-              <button>Editar Cita</button>
-            </Link>
+                <Link to="/crear-cita">
+                  <button>Pedir Cita</button>
+                </Link>
+
+                <Link to="/editar-citas">
+                  <button>Editar Cita</button>
+                </Link>
+              </>
+            )}
             
             <button onClick={logOutUser}>Cerrar Sesión</button>
             <span>{user && user.name}</span>

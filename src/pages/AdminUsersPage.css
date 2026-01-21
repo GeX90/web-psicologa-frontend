@@ -1,0 +1,138 @@
+.admin-users-container {
+  min-height: calc(100vh - 140px);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5ede1 0%, #e8dcc9 100%);
+}
+
+.admin-users-container h1 {
+  text-align: center;
+  color: #615338;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.admin-users-container .subtitle {
+  text-align: center;
+  color: #7e3805;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.users-table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table thead {
+  background: linear-gradient(135deg, #615338 0%, #7e3805 100%);
+  color: white;
+}
+
+.users-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.users-table tbody tr {
+  border-bottom: 1px solid #e0d5c7;
+  transition: background 0.3s ease;
+}
+
+.users-table tbody tr:hover {
+  background: #f5ede1;
+}
+
+.users-table td {
+  padding: 15px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.role-badge.admin {
+  background: #ffd700;
+  color: #615338;
+}
+
+.role-badge.user {
+  background: #e0d5c7;
+  color: #615338;
+}
+
+.btn-delete-user {
+  background: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-delete-user:hover:not(:disabled) {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-delete-user:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .admin-users-container {
+    padding: 30px 15px;
+  }
+
+  .admin-users-container h1 {
+    font-size: 2rem;
+  }
+
+  .users-table-container {
+    padding: 20px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-table-container {
+    padding: 15px;
+  }
+
+  .users-table {
+    font-size: 0.8rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 8px 5px;
+  }
+}

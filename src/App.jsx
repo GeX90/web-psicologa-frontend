@@ -11,6 +11,8 @@ import CreateCitasPage from "./pages/CreateCitasPage";
 import EditCitasPage from "./pages/EditCitasPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import CitaDetailsPage from "./pages/CitaDetailsPage";
+import AdminUsersPage from "./pages/AdminUsersPage";
+import AdminCitasPage from "./pages/AdminCitasPage";
 
 function App() {
   return (
@@ -27,6 +29,10 @@ function App() {
         <Route path="/crear-cita" element={<IsPrivate> <CreateCitasPage /> </IsPrivate>} />
         <Route path="/editar-citas" element={<IsPrivate> <EditCitasPage /> </IsPrivate>} />
         <Route path="/about" element={<AboutUsPage />} />
+        
+        {/* Rutas de Admin */}
+        <Route path="/admin/users" element={<IsPrivate> <AdminUsersPage /> </IsPrivate>} />
+        <Route path="/admin/citas" element={<IsPrivate> <AdminCitasPage /> </IsPrivate>} />
       </Routes>
 
       <Footer />
