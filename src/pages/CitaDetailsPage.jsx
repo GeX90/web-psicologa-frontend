@@ -10,7 +10,7 @@ const API_URL = import.meta.env.VITE_API_URL
 function CitaDetailsPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { isLoggedIn, isLoading } = useContext(AuthContext);
+  const { isLoggedIn, isLoading, user } = useContext(AuthContext);
   const [cita, setCita] = useState(null);
   const [error, setError] = useState(null);
 
@@ -32,9 +32,14 @@ function CitaDetailsPage() {
     }
 
     const storedToken = localStorage.getItem("authToken");
+    
+    // Si el usuario es admin, usar la ruta de admin, sino usar la ruta normal
+    const endpoint = user?.isAdmin 
+      ? `${API_URL}/api/admin/citas/${id}` 
+      : `${API_URL}/api/citas/${id}`;
 
     axios
-      .get(`${API_URL}/api/citas/${id}`, {
+      .get(endpoint, {
         headers: { Authorization: `Bearer ${storedToken}` },
       })
       .then((res) => setCita(res.data))
@@ -42,7 +47,7 @@ function CitaDetailsPage() {
         console.error("Error getting cita details:", err.response?.data || err.message);
         setError(err.response?.data?.message || "Error al obtener la cita");
       });
-  }, [id, isLoggedIn, isLoading, navigate]);
+  }, [id, isLoggedIn, isLoading, navigate, user]);
 
   if (isLoading) return <Loader message="Autenticando..." />;
   if (error) return <h1>Error: {error}</h1>;
