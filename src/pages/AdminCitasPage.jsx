@@ -177,14 +177,25 @@ function AdminCitasPage() {
 
                                         <div className="form-group">
                                             <label htmlFor={`hora-${cita._id}`}>Hora:</label>
-                                            <input
-                                                type="time"
+                                            <select
                                                 id={`hora-${cita._id}`}
                                                 name="hora"
                                                 value={formData.hora}
                                                 onChange={handleChange}
                                                 required
-                                            />
+                                            >
+                                                <option value="">Selecciona una hora</option>
+                                                <option value="09:00">09:00 - 10:00</option>
+                                                <option value="10:00">10:00 - 11:00</option>
+                                                <option value="11:00">11:00 - 12:00</option>
+                                                <option value="12:00">12:00 - 13:00</option>
+                                                <option value="13:00">13:00 - 14:00</option>
+                                                <option value="16:00">16:00 - 17:00</option>
+                                                <option value="17:00">17:00 - 18:00</option>
+                                                <option value="18:00">18:00 - 19:00</option>
+                                                <option value="19:00">19:00 - 20:00</option>
+                                                <option value="20:00">20:00 - 21:00</option>
+                                            </select>
                                         </div>
 
                                         <div className="form-group">
