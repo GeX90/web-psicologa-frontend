@@ -3,13 +3,13 @@
    ========================================== */
 
 .LoginPage {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  margin-top: 80px;
+  padding-top: calc(80px + 2rem);
   background: linear-gradient(135deg, #BFDAD5 0%, #A8B8A0 100%);
 }
 
