@@ -10,6 +10,7 @@ function AuthProviderWrapper(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const isAdmin = user?.role === 'admin';
 
   
   const storeToken = (token) => {
@@ -74,6 +75,7 @@ function AuthProviderWrapper(props) {
         isLoggedIn,
         isLoading,
         user,
+        isAdmin,
         logOutUser,
         storeToken,
         authenticateUser         

@@ -6,7 +6,8 @@ import "./Navbar.css";
 function Navbar() {
   const { 
     isLoggedIn,
-    user,                   
+    user,
+    isAdmin,
     logOutUser              
   } = useContext(AuthContext);
 
@@ -26,7 +27,7 @@ function Navbar() {
 
         {isLoggedIn && (
           <>
-            {user?.role === 'admin' ? (
+            {isAdmin ? (
               // Opciones para Admin
               <>
                 <Link to="/admin/citas">
