@@ -8,13 +8,23 @@ Aplicación web para gestión de citas de psicología especializada en ansiedad,
 
 ## 📋 Descripción
 
-Neuro Espacio es una plataforma moderna y profesional que conecta a pacientes con servicios de psicología. La aplicación permite a los usuarios:
+Neuro Espacio es una plataforma moderna y profesional que conecta a pacientes con servicios de psicología. La aplicación cuenta con dos tipos de usuarios con diferentes niveles de acceso:
 
+### 👤 Usuarios / Pacientes
 - Registrarse y acceder con autenticación segura
-- Reservar y gestionar citas
-- Ver detalles de sus citas programadas
+- Consultar disponibilidad mediante calendario interactivo
+- Reservar citas seleccionando fecha y hora
+- Ver listado de sus citas programadas
+- Editar y cancelar citas (con 48h de anticipación)
 - Acceder a información sobre los profesionales
-- Panel de administración para gestionar usuarios y citas
+
+### 👨‍💼 Administradores
+- Panel administrativo completo
+- Gestionar todos los usuarios registrados
+- Ver y administrar todas las citas del sistema
+- Editar y cancelar cualquier cita sin restricciones
+- Vista de calendario con ocupación completa
+- Estadísticas de citas (total, confirmadas, pendientes)
 
 ## ✨ Características
 
@@ -110,21 +120,67 @@ npm run dev
 
 ## 🔐 Rutas de la Aplicación
 
-### Rutas Públicas
-- `/` - Página de inicio
-- `/about` - Sobre nosotros
-- `/signup` - Registro de usuario
+### 🌐 Rutas Públicas (acceso sin autenticación)
+- `/` - Página de inicio con información del servicio
+- `/about` - Sobre nosotros - información de la profesional
+- `/signup` - Registro de nuevo usuario
 - `/login` - Inicio de sesión
 
-### Rutas Privadas (requieren autenticación)
-- `/citas` - Mis citas
-- `/citas/:id` - Detalles de una cita
-- `/crear-cita` - Crear nueva cita
-- `/editar-citas` - Editar citas
+### 🔒 Rutas Privadas - Usuarios (requieren autenticación)
+- `/citas` - Listado de citas propias
+- `/citas/:id` - Detalles completos de una cita
+- `/citas/create` - Formulario para crear nueva cita
+- `/citas/edit/:id` - Gestionar mis citas (editar/cancelar)
 
-### Rutas de Administrador
-- `/admin/users` - Gestión de usuarios
-- `/admin/citas` - Gestión de todas las citas
+### 🔐 Rutas de Administrador (requieren rol ADMIN)
+- `/admin/users` - Gestión de usuarios (lista completa con roles)
+- `/admin/citas` - Gestión de todas las citas (editar/eliminar sin restricciones)
+- `/calendar` - Vista de calendario con todas las citas del sistema
+
+## ✨ Funcionalidades Detalladas
+
+### 👤 Funcionalidades de Usuario
+
+**Gestión de Citas:**
+- ✅ Ver calendario con días disponibles marcados en verde
+- ✅ Crear citas seleccionando fecha y hora (sesiones de 1 hora)
+- ✅ Horarios disponibles: 09:00-14:00 y 16:00-21:00
+- ✅ Ver lista de citas propias con filtros
+- ✅ Acceder a detalles de cada cita (fecha, hora, motivo)
+- ✅ Editar citas con 48 horas de anticipación mínima
+- ✅ Cancelar citas con 48 horas de anticipación mínima
+- ✅ Navegación intuitiva con botones de editar/eliminar
+
+**Navegación:**
+- Navbar con acceso a: Mis Citas, Nueva Cita, Sobre Nosotros
+- Perfil con nombre de usuario y opción de cerrar sesión
+
+### 👨‍💼 Funcionalidades de Administrador
+
+**Panel Administrativo:**
+- ✅ Acceso directo desde home a gestión de citas, usuarios y calendario
+- ✅ Vista de todas las citas del sistema organizadas
+- ✅ Editar cualquier cita sin restricción de tiempo
+- ✅ Eliminar cualquier cita en cualquier momento
+- ✅ Ver información del usuario asociado a cada cita
+
+**Gestión de Usuarios:**
+- ✅ Tabla completa con todos los usuarios registrados
+- ✅ Visualización de nombre, email y rol de cada usuario
+- ✅ Badges distintivos para diferenciar ADMIN de USER
+- ✅ Contador total de usuarios
+
+**Calendario Administrativo:**
+- ✅ Vista mensual completa en página dedicada
+- ✅ Días con citas marcados en azul
+- ✅ Contador de citas por día
+- ✅ Navegación entre meses
+- ✅ Estadísticas: total de citas, confirmadas y pendientes
+- ✅ Leyenda visual para identificar estados
+
+**Navegación:**
+- Navbar con acceso a: Gestionar Citas, Pacientes, Calendario, Sobre Nosotros
+- Perfil con nombre de usuario y opción de cerrar sesión
 
 ## 🎨 Características de Diseño
 

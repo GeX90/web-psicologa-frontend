@@ -38,7 +38,7 @@ function Navbar() {
                   <button>Pacientes</button>
                 </Link>
 
-                <Link to="/citas">
+                <Link to="/calendar">
                   <button>Calendario</button>
                 </Link>
               </>
