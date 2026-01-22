@@ -182,21 +182,21 @@
 
 .btn-cancel {
   background: white;
-  color: #615338;
-  border: 2px solid #615338 !important;
+  color: #3f3f3a;
+  border: 2px solid #3f3f3a !important;
 }
 
 .btn-cancel:hover:not(:disabled) {
-  background: #f5ede1;
+  background: #F9FAF7;
 }
 
 .btn-edit {
-  background: #7e3805;
+  background: #00788C;
   color: white;
 }
 
 .btn-edit:hover:not(:disabled) {
-  background: #A0522D;
+  background: #005f6f;
   transform: translateY(-2px);
 }
 
