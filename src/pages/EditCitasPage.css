@@ -183,12 +183,14 @@
 }
 
 .cita-card > .button-group button:last-of-type {
-  background: #dc3545;
-  color: white;
+  background: white;
+  color: #3f3f3a;
+  border: 2px solid #BFDAD5;
 }
 
 .cita-card > .button-group button:last-of-type:hover:not(:disabled) {
-  background: #c82333;
+  background: #F9FAF7;
+  border-color: #5B6B5E;
 }
 
 .no-editable-message {

@@ -155,15 +155,18 @@
 }
 
 .btn-delete-detail {
-  background: #dc3545;
-  color: white;
-  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  background: white;
+  color: #3f3f3a;
+  border: 2px solid #BFDAD5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .btn-delete-detail:hover {
-  background: #c82333;
+  background: #F9FAF7;
+  border-color: #5B6B5E;
+  color: #3f3f3a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Tablet Breakpoint */
