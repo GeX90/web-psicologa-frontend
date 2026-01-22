@@ -36,7 +36,7 @@ function HomePage() {
         }
     }, [isLoggedIn, user]);
 
-    const isAdmin = user?.role === 'admin';
+    const isAdmin = user?.role?.toUpperCase() === 'ADMIN';
     
     return (
         <div className="HomePage">
