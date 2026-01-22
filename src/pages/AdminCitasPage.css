@@ -1,6 +1,6 @@
 .admin-citas-container {
   min-height: calc(100vh - 140px);
-  padding: 40px 20px;
+  padding: 6rem 20px 40px;
   background: linear-gradient(135deg, #BFDAD5 0%, #A8B8A0 100%);
 }
 
