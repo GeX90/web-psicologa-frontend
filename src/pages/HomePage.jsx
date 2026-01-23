@@ -123,7 +123,7 @@ function HomePage() {
                             </p>
                             
                             <Link to="/about" className="btn-learn-more">
-                                Conoce más sobre mí
+                                Conoce más sobre Neuro Espacio
                             </Link>
                         </div>
                     </div>

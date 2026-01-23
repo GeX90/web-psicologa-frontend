@@ -128,6 +128,11 @@
   transition: all 0.3s ease;
   text-decoration: none;
   text-align: center;
+  min-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .btn-volver {

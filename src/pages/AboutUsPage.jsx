@@ -6,7 +6,7 @@ function AboutUsPage() {
       <div className="about-container">
         <h1>Sobre Nosotros</h1>
         <p>
-          En Neuro Espacio, nos dedica a proporcionar servicios de salud mental de alta calidad
+          En Neuro Espacio, nos dedicamos a proporcionar servicios de salud mental de alta calidad
           y accesible para todos. Nuestro equipo de profesionales especializados está comprometido
           con tu bienestar y desarrollo personal.
         </p>

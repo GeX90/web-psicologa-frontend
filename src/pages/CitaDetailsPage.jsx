@@ -83,7 +83,7 @@ function CitaDetailsPage() {
         </div>
 
         <div className="cita-details-actions">
-          <Link to="/citas" className="btn-volver">Volver a Mis Citas</Link>
+          <Link to="/citas" className="btn-volver">← Volver a Mis Citas</Link>
           <Link to={`/citas/edit/${id}`} className="btn-edit-detail">✏️ Editar Cita</Link>
           <button 
             className="btn-delete-detail" 

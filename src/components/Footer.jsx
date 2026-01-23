@@ -15,8 +15,8 @@ function Footer() {
         <div className="footer-section">
           <h4>Navegación</h4>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/about">Sobre Nosotros</Link></li>
             <li><Link to="/signup">Pedir Cita</Link></li>
           </ul>
         </div>
