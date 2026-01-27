@@ -19,14 +19,14 @@
 }
 
 .calendar-month {
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
 }
 
 .calendar-nav {
-  background: #636E40;
+  background: #4a5632;
   color: white;
   border: none;
   width: 36px;
@@ -38,13 +38,13 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(99, 110, 64, 0.25);
+  box-shadow: 0 2px 8px rgba(74, 86, 50, 0.25);
 }
 
 .calendar-nav:hover {
-  background: #4f5833;
+  background: #3d4429;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.35);
+  box-shadow: 0 4px 12px rgba(74, 86, 50, 0.35);
 }
 
 .calendar-weekdays {
@@ -204,6 +204,10 @@
     gap: 4px;
   }
 }
+
+
+
+
 
 
 

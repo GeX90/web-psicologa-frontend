@@ -10,7 +10,7 @@
 }
 
 .admin-citas-header h1 {
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 2.25rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
@@ -61,7 +61,7 @@
 
 .btn-clear-filter {
   background: white;
-  color: #636E40;
+  color: #3f3f3a;
   border: none;
   padding: 0.625rem 1.25rem;
   border-radius: 10px;
@@ -127,13 +127,13 @@
 }
 
 .cita-card {
-  background: white;
+  background: #BFDAD5;
   border-radius: 16px;
   padding: 1.75rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(191, 218, 213, 0.3);
-  border-left: 4px solid #636E40;
+  border: 1px solid rgba(168, 184, 160, 0.4);
+  border-left: 4px solid #4a5632;
   position: relative;
   overflow: hidden;
 }
@@ -145,15 +145,15 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #636E40 0%, #A8B8A0 100%);
+  background: linear-gradient(90deg, #4a5632 0%, #A8B8A0 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .cita-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 28px rgba(99, 110, 64, 0.15);
-  border-color: #636E40;
+  box-shadow: 0 8px 28px rgba(74, 86, 50, 0.15);
+  border-color: #3f3f3a;
 }
 
 .cita-card:hover::before {
@@ -177,7 +177,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 1.75rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -206,16 +206,16 @@
 
 /* User Info in Card */
 .user-info-card {
-  background: #F0F7F8;
+  background: rgba(255, 255, 255, 0.6);
   padding: 0.875rem;
   border-radius: 12px;
   margin-bottom: 1rem;
-  border-left: 3px solid #636E40;
+  border-left: 3px solid #4a5632;
 }
 
 .user-info-card .user-name {
   margin: 0 0 0.5rem 0;
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -274,7 +274,7 @@
 }
 
 .edit-form h3 {
-  color: #636E40;
+  color: #3f3f3a;
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
 }
@@ -299,7 +299,7 @@
 
 .form-group label {
   display: block;
-  color: #636E40;
+  color: #3f3f3a;
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -321,8 +321,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #636E40;
-  box-shadow: 0 0 0 3px rgba(99, 110, 64, 0.1);
+  border-color: #3f3f3a;
+  box-shadow: 0 0 0 3px rgba(74, 86, 50, 0.1);
 }
 
 .form-group textarea {
@@ -350,14 +350,14 @@
 }
 
 .btn-edit {
-  background: #636E40;
+  background: #4a5632;
   color: white;
 }
 
 .btn-edit:hover:not(:disabled) {
-  background: #4f5833;
+  background: #3d4429;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(99, 110, 64, 0.3);
+  box-shadow: 0 4px 8px rgba(74, 86, 50, 0.3);
 }
 
 .btn-delete {
@@ -418,6 +418,10 @@
     font-size: 2.5rem;
   }
 }
+
+
+
+
 
 
 

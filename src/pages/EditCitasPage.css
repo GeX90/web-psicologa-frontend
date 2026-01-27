@@ -6,7 +6,7 @@
 
 .edit-citas-container h1 {
   text-align: center;
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
@@ -52,7 +52,7 @@
 }
 
 .cita-card h3 {
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 1.5rem;
   margin-bottom: 16px;
   border-bottom: 2px solid #A8B8A0;
@@ -73,7 +73,7 @@
 }
 
 .cita-info strong {
-  color: #636E40;
+  color: #3f3f3a;
   font-weight: 600;
   min-width: 100px;
 }
@@ -83,7 +83,7 @@
 }
 
 .edit-form h3 {
-  color: #636E40;
+  color: #3f3f3a;
   margin-bottom: 20px;
 }
 
@@ -123,8 +123,8 @@
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #636E40;
-  box-shadow: 0 0 0 3px rgba(99, 110, 64, 0.15);
+  border-color: #3f3f3a;
+  box-shadow: 0 0 0 3px rgba(74, 86, 50, 0.15);
 }
 
 .button-group {
@@ -151,14 +151,14 @@
 }
 
 .button-group button:first-child {
-  background: #636E40;
+  background: #4a5632;
   color: white;
 }
 
 .button-group button:first-child:hover:not(:disabled) {
-  background: #4f5833;
+  background: #3d4429;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.3);
+  box-shadow: 0 4px 12px rgba(74, 86, 50, 0.3);
 }
 
 .button-group button:last-child {
@@ -176,12 +176,12 @@
 }
 
 .cita-card > .button-group button:first-of-type {
-  background: #636E40;
+  background: #4a5632;
   color: white;
 }
 
 .cita-card > .button-group button:first-of-type:hover:not(:disabled) {
-  background: #4f5833;
+  background: #3d4429;
 }
 
 .cita-card > .button-group button:last-of-type {
@@ -250,6 +250,10 @@
     font-size: 0.95rem;
   }
 }
+
+
+
+
 
 
 

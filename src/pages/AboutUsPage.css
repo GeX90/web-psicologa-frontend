@@ -22,7 +22,7 @@
 }
 
 .AboutUsPage h1 {
-    color: #636E40;
+    color: #3f3f3a;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -30,7 +30,7 @@
 }
 
 .AboutUsPage h2 {
-    color: #636E40;
+    color: #3f3f3a;
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -69,7 +69,7 @@
 
 .AboutUsPage li:before {
     content: "✓";
-    color: #636E40;
+    color: #3f3f3a;
     font-weight: 700;
     font-size: 1.5rem;
     position: absolute;
@@ -86,19 +86,19 @@
 .dev-link {
     display: inline-block;
     padding: 0.875rem 1.75rem;
-    background: #636E40;
+    background: #4a5632;
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(99, 110, 64, 0.3);
+    box-shadow: 0 4px 12px rgba(74, 86, 50, 0.3);
 }
 
 .dev-link:hover {
-    background: #4f5833;
+    background: #3d4429;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(99, 110, 64, 0.4);
+    box-shadow: 0 6px 16px rgba(74, 86, 50, 0.4);
 }
 
 /* Tablet Breakpoint */
@@ -161,6 +161,10 @@
         font-size: 1.1rem;
     }
 }
+
+
+
+
 
 
 

@@ -14,7 +14,7 @@
 }
 
 .CitasPage-header h1 {
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 2rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
@@ -43,7 +43,7 @@
 }
 
 .CitasPage-empty h2 {
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 1.5rem;
   margin: 0 0 0.75rem 0;
   font-weight: 700;
@@ -59,20 +59,20 @@
 .btn-create {
   display: inline-block;
   padding: 0.875rem 2rem;
-  background: #636E40;
+  background: #4a5632;
   color: white;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.3);
+  box-shadow: 0 4px 12px rgba(74, 86, 50, 0.3);
 }
 
 .btn-create:hover {
-  background: #4f5833;
+  background: #3d4429;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(99, 110, 64, 0.4);
+  box-shadow: 0 6px 16px rgba(74, 86, 50, 0.4);
 }
 
 /* Citas Grid */
@@ -91,14 +91,14 @@
 }
 
 .cita-card {
-  background: white;
+  background: #BFDAD5;
   border-radius: 16px;
   padding: 1.75rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(191, 218, 213, 0.3);
-  border-left: 4px solid #636E40;
+  border: 1px solid rgba(168, 184, 160, 0.4);
+  border-left: 4px solid #4a5632;
   position: relative;
   overflow: hidden;
 }
@@ -110,15 +110,15 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #636E40 0%, #A8B8A0 100%);
+  background: linear-gradient(90deg, #4a5632 0%, #A8B8A0 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .cita-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 28px rgba(99, 110, 64, 0.15);
-  border-color: #636E40;
+  box-shadow: 0 8px 28px rgba(74, 86, 50, 0.2);
+  border-color: #4a5632;
 }
 
 .cita-card:hover::before {
@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 1.75rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -223,15 +223,15 @@
   text-decoration: none;
   text-align: center;
   border: none;
-  background: #636E40;
+  background: #4a5632;
   color: white;
-  box-shadow: 0 2px 8px rgba(99, 110, 64, 0.25);
+  box-shadow: 0 2px 8px rgba(74, 86, 50, 0.25);
 }
 
 .btn-details:hover {
-  background: #4f5833;
+  background: #3d4429;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.35);
+  box-shadow: 0 4px 12px rgba(74, 86, 50, 0.35);
 }
 
 /* Tablet Breakpoint */
@@ -277,6 +277,10 @@
     gap: 2rem;
   }
 }
+
+
+
+
 
 
 

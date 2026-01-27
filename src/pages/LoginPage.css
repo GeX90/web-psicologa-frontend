@@ -18,7 +18,7 @@
 }
 
 .LoginPage h1 {
-  color: #636E40;
+  color: #3f3f3a;
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -69,8 +69,8 @@
 
 .LoginPage input:focus {
   outline: none;
-  border-color: #636E40;
-  box-shadow: 0 0 0 4px rgba(99, 110, 64, 0.1);
+  border-color: #3f3f3a;
+  box-shadow: 0 0 0 4px rgba(74, 86, 50, 0.1);
 }
 
 .password-input-wrapper {
@@ -105,7 +105,7 @@
 }
 
 .password-toggle-btn:hover {
-  color: #636E40;
+  color: #3f3f3a;
   transform: none;
   box-shadow: none !important;
 }
@@ -120,7 +120,7 @@
   width: 100%;
   padding: 1rem 1.5rem;
   margin-top: 1.75rem;
-  background: #636E40;
+  background: #4a5632;
   color: white;
   border: none;
   border-radius: 12px;
@@ -128,14 +128,14 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 3px 10px rgba(99, 110, 64, 0.25);
+  box-shadow: 0 3px 10px rgba(74, 86, 50, 0.25);
   font-family: 'Poppins', sans-serif;
 }
 
 .LoginPage button[type="submit"]:hover {
-  background: #4f5833;
+  background: #3d4429;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(99, 110, 64, 0.35);
+  box-shadow: 0 6px 20px rgba(74, 86, 50, 0.35);
 }
 
 .LoginPage button[type="submit"]:active {
@@ -218,6 +218,10 @@
     padding: 0.875rem 1.25rem;
   }
 }
+
+
+
+
 
 
 
