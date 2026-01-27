@@ -64,36 +64,20 @@ function SignupPage(props) {
             />
 
             <label>Contraseña:</label>
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+            <div className="password-input-wrapper">
               <input 
                 type={showPassword ? "text" : "password"}
                 name="password"
                 value={password}
                 onChange={handlePassword}
-                style={{ paddingRight: '40px', flex: 1 }}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                style={{
-                  position: 'absolute',
-                  right: '10px',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  fontSize: '12px',
-                  padding: '0',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  height: '100%',
-                  top: '0',
-                  color: '#666',
-                  fontWeight: '500'
-                }}
+                className="password-toggle-btn"
                 aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
               >
-                {showPassword ? 'Ocultar' : 'Mostrar'}
+                {showPassword ? '👁️' : '👁️‍🗨️'}
               </button>
             </div>
 
