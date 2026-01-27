@@ -282,6 +282,31 @@ function CalendarPage() {
           </div>
         </div>
 
+        {/* Feedback de filtros activos */}
+        {(filterPaciente || filterMotivo) && (
+          <div className="filter-feedback">
+            <div className="filter-feedback-content">
+              <span className="feedback-icon">🔍</span>
+              <div className="feedback-text">
+                <strong>Filtros activos:</strong>
+                {filterPaciente && (
+                  <span className="filter-tag">
+                    Paciente: {pacientes.find(p => p._id === filterPaciente)?.name}
+                  </span>
+                )}
+                {filterMotivo && (
+                  <span className="filter-tag">
+                    Motivo: "{filterMotivo}"
+                  </span>
+                )}
+                <span className="results-count">
+                  {citasData.length} cita{citasData.length !== 1 ? 's' : ''} encontrada{citasData.length !== 1 ? 's' : ''}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="calendar-legend">
           <div className="legend-item">
             <div className="legend-color has-citas"></div>
