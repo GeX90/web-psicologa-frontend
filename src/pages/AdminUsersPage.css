@@ -6,7 +6,7 @@
 
 .admin-users-container h1 {
   text-align: center;
-  color: #00788C;
+  color: #636E40;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -35,7 +35,7 @@
 }
 
 .users-table thead {
-  background: #00788C;
+  background: #636E40;
   color: white;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .users-table tbody tr {
-  border-bottom: 1px solid #BFDAD5;
+  border-bottom: 1px solid #A8B8A0;
   transition: background 0.3s ease;
 }
 
@@ -70,13 +70,13 @@
 }
 
 .role-badge.admin {
-  background: #00788C;
+  background: #636E40;
   color: white;
 }
 
 .role-badge.user {
-  background: #BFDAD5;
-  color: #00788C;
+  background: #A8B8A0;
+  color: #636E40;
 }
 
 .btn-delete-user {
@@ -136,3 +136,6 @@
     padding: 8px 5px;
   }
 }
+
+
+

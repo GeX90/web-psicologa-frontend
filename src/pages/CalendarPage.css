@@ -24,7 +24,7 @@
 
 .calendar-page-header > div h1 {
   text-align: center;
-  color: #00788C;
+  color: #636E40;
   font-size: 2.25rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -33,7 +33,7 @@
 }
 
 .btn-create-cita {
-  background: #00788C;
+  background: #636E40;
   color: white;
   padding: 0.875rem 1.75rem;
   border-radius: 12px;
@@ -41,16 +41,16 @@
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 3px 10px rgba(0, 120, 140, 0.25);
+  box-shadow: 0 3px 10px rgba(99, 110, 64, 0.25);
   display: inline-block;
   white-space: nowrap;
   font-family: 'Poppins', sans-serif;
 }
 
 .btn-create-cita:hover {
-  background: #005f6f;
+  background: #4f5833;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 120, 140, 0.35);
+  box-shadow: 0 6px 20px rgba(99, 110, 64, 0.35);
 }
 
 .calendar-subtitle {
@@ -101,8 +101,8 @@
 .filter-select:focus,
 .filter-input:focus {
   outline: none;
-  border-color: #00788C;
-  box-shadow: 0 0 0 4px rgba(0, 120, 140, 0.1);
+  border-color: #636E40;
+  box-shadow: 0 0 0 4px rgba(99, 110, 64, 0.1);
 }
 
 .view-toggle {
@@ -127,13 +127,13 @@
 }
 
 .view-btn.active {
-  background: #00788C;
+  background: #636E40;
   color: white;
-  box-shadow: 0 2px 8px rgba(0, 120, 140, 0.3);
+  box-shadow: 0 2px 8px rgba(99, 110, 64, 0.3);
 }
 
 .view-btn:hover:not(.active) {
-  background: rgba(0, 120, 140, 0.1);
+  background: rgba(99, 110, 64, 0.1);
 }
 
 .filter-actions {
@@ -155,36 +155,36 @@
 }
 
 .btn-search {
-  background: #00788C;
+  background: #636E40;
   color: white;
-  box-shadow: 0 2px 8px rgba(0, 120, 140, 0.3);
+  box-shadow: 0 2px 8px rgba(99, 110, 64, 0.3);
 }
 
 .btn-search:hover {
-  background: #005f6f;
+  background: #4f5833;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 120, 140, 0.4);
+  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.4);
 }
 
 .btn-clear {
   background: #F9FAF7;
   color: #5B6B5E;
-  border: 2px solid #BFDAD5;
+  border: 2px solid #A8B8A0;
 }
 
 .btn-clear:hover {
-  background: #BFDAD5;
-  border-color: #00788C;
+  background: #A8B8A0;
+  border-color: #636E40;
   transform: translateY(-2px);
 }
 
 /* Feedback de filtros activos */
 .filter-feedback {
-  background: linear-gradient(135deg, #00788C 0%, #005f6f 100%);
+  background: linear-gradient(135deg, #636E40 0%, #4f5833 100%);
   border-radius: 16px;
   padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 120, 140, 0.2);
+  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.2);
   animation: slideDown 0.3s ease;
 }
 
@@ -234,7 +234,7 @@
 }
 
 .results-count {
-  background: #00788C;
+  background: #636E40;
   padding: 0.375rem 0.875rem;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -264,11 +264,11 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 2px solid #BFDAD5;
+  border: 2px solid #A8B8A0;
 }
 
 .legend-color.has-citas {
-  background: #00788C;
+  background: #636E40;
 }
 
 .legend-color.no-citas {
@@ -296,11 +296,11 @@
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #BFDAD5;
+  border-bottom: 2px solid #A8B8A0;
 }
 
 .calendar-nav {
-  background: #00788C;
+  background: #636E40;
   color: white;
   border: none;
   width: 46px;
@@ -312,17 +312,17 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 120, 140, 0.25);
+  box-shadow: 0 2px 8px rgba(99, 110, 64, 0.25);
 }
 
 .calendar-nav:hover {
-  background: #005f6f;
+  background: #4f5833;
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 120, 140, 0.35);
+  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.35);
 }
 
 .calendar-month {
-  color: #00788C;
+  color: #636E40;
   font-size: 1.75rem;
   font-weight: 700;
   text-transform: capitalize;
@@ -373,18 +373,18 @@
 
 .calendar-day.no-citas {
   background: #F9FAF7;
-  border-color: #BFDAD5;
+  border-color: #A8B8A0;
 }
 
 .calendar-day.has-citas {
-  background: #00788C;
-  border-color: #005f6f;
-  box-shadow: 0 4px 12px rgba(0, 120, 140, 0.3);
+  background: #636E40;
+  border-color: #4f5833;
+  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.3);
 }
 
 .calendar-day.has-citas:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 120, 140, 0.4);
+  box-shadow: 0 6px 16px rgba(99, 110, 64, 0.4);
 }
 
 .day-number {
@@ -401,8 +401,8 @@
   position: absolute;
   bottom: 4px;
   right: 4px;
-  background: #BFDAD5;
-  color: #00788C;
+  background: #A8B8A0;
+  color: #636E40;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -431,7 +431,7 @@
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #00788C;
+  border-top: 4px solid #636E40;
   transition: all 0.3s ease;
 }
 
@@ -443,7 +443,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #00788C;
+  color: #636E40;
   margin-bottom: 0.5rem;
 }
 
@@ -482,7 +482,7 @@
 .week-day-header {
   text-align: center;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid #BFDAD5;
+  border-bottom: 2px solid #A8B8A0;
 }
 
 .week-day-name {
@@ -496,7 +496,7 @@
 .week-day-number {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #00788C;
+  color: #636E40;
   margin-top: 0.25rem;
 }
 
@@ -511,7 +511,7 @@
   background: white;
   padding: 0.75rem;
   border-radius: 8px;
-  border-left: 3px solid #00788C;
+  border-left: 3px solid #636E40;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
@@ -524,7 +524,7 @@
 .cita-time {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #00788C;
+  color: #636E40;
   margin-bottom: 0.25rem;
 }
 
@@ -545,7 +545,7 @@
 
 .no-citas-day {
   text-align: center;
-  color: #BFDAD5;
+  color: #A8B8A0;
   font-size: 0.85rem;
   padding: 1rem 0;
   font-style: italic;
@@ -681,3 +681,6 @@
     right: 2px;
   }
 }
+
+
+

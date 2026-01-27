@@ -39,7 +39,7 @@
 }
 
 .HomePage h1 {
-    color: #00788C;
+    color: #636E40;
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0 0 1.25rem 0;
@@ -48,7 +48,7 @@
 }
 
 .neuro-espacio-title {
-    color: #00788C !important;
+    color: #636E40 !important;
 }
 
 .home-main-message {
@@ -87,30 +87,30 @@
 }
 
 .btn-cta.primary {
-    background: #00788C;
+    background: #636E40;
     color: white;
-    box-shadow: 0 3px 10px rgba(0, 120, 140, 0.25);
+    box-shadow: 0 3px 10px rgba(99, 110, 64, 0.25);
     border: none;
 }
 
 .btn-cta.primary:hover {
-    background: #005f6f;
+    background: #4f5833;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 120, 140, 0.35);
+    box-shadow: 0 6px 20px rgba(99, 110, 64, 0.35);
 }
 
 .btn-cta.secondary {
     background: white;
-    color: #00788C;
-    border: 2px solid #00788C;
+    color: #636E40;
+    border: 2px solid #636E40;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .btn-cta.secondary:hover {
-    background: #00788C;
+    background: #636E40;
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 120, 140, 0.25);
+    box-shadow: 0 6px 20px rgba(99, 110, 64, 0.25);
 }
 
 /* ==========================================
@@ -126,7 +126,7 @@
 .section-title-small {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #00788C;
+    color: #636E40;
     margin: 0;
     text-align: center;
 }
@@ -145,8 +145,8 @@
 
 .quick-action-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 28px rgba(0, 120, 140, 0.12);
-    border-color: #00788C;
+    box-shadow: 0 8px 28px rgba(99, 110, 64, 0.12);
+    border-color: #636E40;
 }
 
 .quick-action-card.next-appointment {
@@ -178,7 +178,7 @@
     font-weight: 600;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #00788C;
+    color: #636E40;
 }
 
 .appointment-details {
@@ -314,19 +314,19 @@
 }
 
 .stat-card.today {
-    border-left: 4px solid #00788C;
+    border-left: 4px solid #636E40;
 }
 
 .stat-card.week {
-    border-left: 4px solid #BFDAD5;
+    border-left: 4px solid #A8B8A0;
 }
 
 .stat-card.month {
-    border-left: 4px solid #00788C;
+    border-left: 4px solid #636E40;
 }
 
 .stat-card.patients {
-    border-left: 4px solid #BFDAD5;
+    border-left: 4px solid #A8B8A0;
 }
 
 .stat-icon {
@@ -350,7 +350,7 @@
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #00788C;
+    color: #636E40;
     margin: 0;
     line-height: 1;
 }
@@ -367,7 +367,7 @@
 .next-appointment-card h4 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #00788C;
+    color: #636E40;
     margin: 0 0 1rem 0;
 }
 
@@ -380,7 +380,7 @@
 .appointment-patient {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #00788C;
+    color: #636E40;
     margin: 0 0 0.5rem 0;
 }
 
@@ -399,7 +399,7 @@
 
 .btn-view-all {
     display: inline-block;
-    background: #00788C;
+    background: #636E40;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
@@ -410,7 +410,7 @@
 }
 
 .btn-view-all:hover {
-    background: #005f6f;
+    background: #4f5833;
     transform: translateY(-2px);
 }
 
@@ -421,23 +421,23 @@
 }
 
 .admin-card {
-    background: linear-gradient(135deg, #00788C 0%, #005f6f 100%);
+    background: linear-gradient(135deg, #636E40 0%, #4f5833 100%);
     color: white;
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0, 120, 140, 0.2);
+    box-shadow: 0 4px 16px rgba(99, 110, 64, 0.2);
     transition: all 0.3s ease;
     text-decoration: none;
     display: block;
 }
 
 .admin-card.primary {
-    background: linear-gradient(135deg, #00788C 0%, #005f6f 100%);
+    background: linear-gradient(135deg, #636E40 0%, #4f5833 100%);
 }
 
 .admin-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 120, 140, 0.3);
+    box-shadow: 0 8px 24px rgba(99, 110, 64, 0.3);
 }
 
 .admin-icon {
@@ -665,7 +665,7 @@
 }
 
 .calendar-title {
-    color: #00788C;
+    color: #636E40;
     font-size: 1.75rem;
     font-weight: 700;
     margin: 0;
@@ -876,4 +876,7 @@
         font-size: 2rem;
     }
 }
+
+
+
 

@@ -6,7 +6,7 @@
 
 .edit-citas-container h1 {
   text-align: center;
-  color: #00788C;
+  color: #636E40;
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
@@ -52,10 +52,10 @@
 }
 
 .cita-card h3 {
-  color: #00788C;
+  color: #636E40;
   font-size: 1.5rem;
   margin-bottom: 16px;
-  border-bottom: 2px solid #BFDAD5;
+  border-bottom: 2px solid #A8B8A0;
   padding-bottom: 12px;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .cita-info strong {
-  color: #00788C;
+  color: #636E40;
   font-weight: 600;
   min-width: 100px;
 }
@@ -83,7 +83,7 @@
 }
 
 .edit-form h3 {
-  color: #00788C;
+  color: #636E40;
   margin-bottom: 20px;
 }
 
@@ -106,7 +106,7 @@
   max-width: 100%;
   padding: 12px 16px;
   margin: 0;
-  border: 2px solid #BFDAD5;
+  border: 2px solid #A8B8A0;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
@@ -123,8 +123,8 @@
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #00788C;
-  box-shadow: 0 0 0 3px rgba(0, 120, 140, 0.15);
+  border-color: #636E40;
+  box-shadow: 0 0 0 3px rgba(99, 110, 64, 0.15);
 }
 
 .button-group {
@@ -151,14 +151,14 @@
 }
 
 .button-group button:first-child {
-  background: #00788C;
+  background: #636E40;
   color: white;
 }
 
 .button-group button:first-child:hover:not(:disabled) {
-  background: #005f6f;
+  background: #4f5833;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 120, 140, 0.3);
+  box-shadow: 0 4px 12px rgba(99, 110, 64, 0.3);
 }
 
 .button-group button:last-child {
@@ -176,18 +176,18 @@
 }
 
 .cita-card > .button-group button:first-of-type {
-  background: #00788C;
+  background: #636E40;
   color: white;
 }
 
 .cita-card > .button-group button:first-of-type:hover:not(:disabled) {
-  background: #005f6f;
+  background: #4f5833;
 }
 
 .cita-card > .button-group button:last-of-type {
   background: white;
   color: #3f3f3a;
-  border: 2px solid #BFDAD5;
+  border: 2px solid #A8B8A0;
 }
 
 .cita-card > .button-group button:last-of-type:hover:not(:disabled) {
@@ -250,3 +250,6 @@
     font-size: 0.95rem;
   }
 }
+
+
+

@@ -10,7 +10,7 @@
 }
 
 .admin-citas-header h1 {
-  color: #00788C;
+  color: #636E40;
   font-size: 2.25rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
@@ -25,7 +25,7 @@
 }
 
 .filter-info {
-  background: linear-gradient(135deg, #00788C 0%, #006073 100%);
+  background: linear-gradient(135deg, #636E40 0%, #006073 100%);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 12px;
@@ -61,7 +61,7 @@
 
 .btn-clear-filter {
   background: white;
-  color: #00788C;
+  color: #636E40;
   border: none;
   padding: 0.625rem 1.25rem;
   border-radius: 10px;
@@ -133,7 +133,7 @@
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(191, 218, 213, 0.3);
-  border-left: 4px solid #00788C;
+  border-left: 4px solid #636E40;
   position: relative;
   overflow: hidden;
 }
@@ -145,15 +145,15 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #00788C 0%, #BFDAD5 100%);
+  background: linear-gradient(90deg, #636E40 0%, #A8B8A0 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .cita-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 28px rgba(0, 120, 140, 0.15);
-  border-color: #00788C;
+  box-shadow: 0 8px 28px rgba(99, 110, 64, 0.15);
+  border-color: #636E40;
 }
 
 .cita-card:hover::before {
@@ -166,18 +166,18 @@
   gap: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #BFDAD5;
+  border-bottom: 2px solid #A8B8A0;
 }
 
 .cita-card-icon {
   width: 56px;
   height: 56px;
-  background: #BFDAD5;
+  background: #A8B8A0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00788C;
+  color: #636E40;
   font-size: 1.75rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -210,12 +210,12 @@
   padding: 0.875rem;
   border-radius: 12px;
   margin-bottom: 1rem;
-  border-left: 3px solid #00788C;
+  border-left: 3px solid #636E40;
 }
 
 .user-info-card .user-name {
   margin: 0 0 0.5rem 0;
-  color: #00788C;
+  color: #636E40;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -265,7 +265,7 @@
   display: flex;
   gap: 0.5rem;
   padding-top: 1rem;
-  border-top: 2px solid #BFDAD5;
+  border-top: 2px solid #A8B8A0;
 }
 
 /* Edit Form Styles */
@@ -274,7 +274,7 @@
 }
 
 .edit-form h3 {
-  color: #00788C;
+  color: #636E40;
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
 }
@@ -284,7 +284,7 @@
   padding: 0.875rem;
   border-radius: 8px;
   margin-bottom: 1rem;
-  border-left: 3px solid #00788C;
+  border-left: 3px solid #636E40;
 }
 
 .user-info-edit p {
@@ -299,7 +299,7 @@
 
 .form-group label {
   display: block;
-  color: #00788C;
+  color: #636E40;
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -310,7 +310,7 @@
 .form-group textarea {
   width: 100%;
   padding: 0.625rem;
-  border: 2px solid #BFDAD5;
+  border: 2px solid #A8B8A0;
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -321,8 +321,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #00788C;
-  box-shadow: 0 0 0 3px rgba(0, 120, 140, 0.1);
+  border-color: #636E40;
+  box-shadow: 0 0 0 3px rgba(99, 110, 64, 0.1);
 }
 
 .form-group textarea {
@@ -350,14 +350,14 @@
 }
 
 .btn-edit {
-  background: #00788C;
+  background: #636E40;
   color: white;
 }
 
 .btn-edit:hover:not(:disabled) {
-  background: #005f6f;
+  background: #4f5833;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 120, 140, 0.3);
+  box-shadow: 0 4px 8px rgba(99, 110, 64, 0.3);
 }
 
 .btn-delete {
@@ -418,3 +418,6 @@
     font-size: 2.5rem;
   }
 }
+
+
+
