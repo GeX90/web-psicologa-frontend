@@ -175,6 +175,17 @@ function CalendarPage() {
     });
   };
 
+  const handleDayClick = (day, citas) => {
+    if (citas.length === 0) return;
+    
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const dayStr = String(day).padStart(2, '0');
+    const selectedDate = `${year}-${month}-${dayStr}`;
+    
+    navigate('/admin/citas', { state: { filterDate: selectedDate } });
+  };
+
   const renderCalendar = () => {
     const { daysInMonth, startingDayOfWeek } = getDaysInMonth(currentDate);
     const days = [];
@@ -193,6 +204,8 @@ function CalendarPage() {
         <div
           key={day}
           className={`calendar-day ${hasCitas ? 'has-citas' : 'no-citas'}`}
+          onClick={() => handleDayClick(day, citas)}
+          style={{ cursor: hasCitas ? 'pointer' : 'default' }}
         >
           <span className="day-number">{day}</span>
           {hasCitas && (

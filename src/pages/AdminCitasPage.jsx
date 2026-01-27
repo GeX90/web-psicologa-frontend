@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import Loader from "../components/Loader";
 import "./AdminCitasPage.css";
@@ -10,6 +10,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 function AdminCitasPage() {
     const { user, isLoggedIn, isLoading } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
     const [citas, setCitas] = useState(null);
     const [error, setError] = useState(null);
     const [editingId, setEditingId] = useState(null);
@@ -19,6 +20,7 @@ function AdminCitasPage() {
         motivo: ""
     });
     const [loading, setLoading] = useState(false);
+    const [filterDate, setFilterDate] = useState(location.state?.filterDate || null);
 
     const formatFecha = (fecha) => {
         const date = new Date(fecha);
@@ -141,17 +143,45 @@ function AdminCitasPage() {
         return <h1>Error: {error}</h1>;
     }
 
+    // Filtrar citas por fecha si viene del calendario
+    const citasFiltradas = filterDate 
+        ? citas.filter(cita => {
+            const citaDate = new Date(cita.fecha).toISOString().split('T')[0];
+            return citaDate === filterDate;
+        })
+        : citas;
+
+    const handleClearFilter = () => {
+        setFilterDate(null);
+        window.history.replaceState({}, document.title);
+    };
+
     return (
         <div className="admin-citas-container">
             <h1>Gestión de Todas las Citas</h1>
-            <p className="subtitle">Total de citas: {citas.length}</p>
+            
+            {filterDate && (
+                <div className="filter-info">
+                    <p>Mostrando citas del: <strong>{new Date(filterDate + 'T00:00:00').toLocaleDateString('es-ES', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })}</strong></p>
+                    <button onClick={handleClearFilter} className="btn-clear-filter">
+                        Ver todas las citas
+                    </button>
+                </div>
+            )}
+            
+            <p className="subtitle">Total de citas: {filterDate ? citasFiltradas.length : citas.length}</p>
             {error && editingId && <p className="error">{error}</p>}
             
-            {citas.length === 0 ? (
-                <p>No hay citas registradas</p>
+            {citasFiltradas.length === 0 ? (
+                <p>{filterDate ? 'No hay citas para esta fecha' : 'No hay citas registradas'}</p>
             ) : (
                 <div className="citas-list">
-                    {citas.map((cita) => {
+                    {citasFiltradas.map((cita) => {
                         const isEditing = editingId === cita._id;
 
                         return (
