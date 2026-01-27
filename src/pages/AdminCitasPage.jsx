@@ -158,7 +158,10 @@ function AdminCitasPage() {
 
     return (
         <div className="admin-citas-container">
-            <h1>Gestión de Todas las Citas</h1>
+            <div className="admin-citas-header">
+                <h1>Gestión de Todas las Citas</h1>
+                <p className="subtitle">Total de citas: {filterDate ? citasFiltradas.length : citas.length}</p>
+            </div>
             
             {filterDate && (
                 <div className="filter-info">
@@ -174,22 +177,25 @@ function AdminCitasPage() {
                 </div>
             )}
             
-            <p className="subtitle">Total de citas: {filterDate ? citasFiltradas.length : citas.length}</p>
             {error && editingId && <p className="error">{error}</p>}
             
             {citasFiltradas.length === 0 ? (
-                <p>{filterDate ? 'No hay citas para esta fecha' : 'No hay citas registradas'}</p>
+                <div className="empty-state">
+                    <p>{filterDate ? 'No hay citas para esta fecha' : 'No hay citas registradas'}</p>
+                </div>
             ) : (
-                <div className="citas-list">
+                <div className="citas-grid">
                     {citasFiltradas.map((cita) => {
                         const isEditing = editingId === cita._id;
+                        const fecha = new Date(cita.fecha);
+                        const dia = fecha.getDate();
 
                         return (
                             <div className="cita-card" key={cita._id}>
                                 {isEditing ? (
                                     <div className="edit-form">
                                         <h3>Editar Cita</h3>
-                                        <div className="user-info">
+                                        <div className="user-info-edit">
                                             <p><strong>Usuario:</strong> {cita.usuario?.name || 'N/A'}</p>
                                             <p><strong>Email:</strong> {cita.usuario?.email || 'N/A'}</p>
                                         </div>
@@ -257,32 +263,45 @@ function AdminCitasPage() {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="cita-info">
-                                        <div className="user-info">
-                                            <p><strong>Usuario:</strong> {cita.usuario?.name || 'N/A'}</p>
-                                            <p><strong>Email:</strong> {cita.usuario?.email || 'N/A'}</p>
+                                    <>
+                                        <div className="cita-card-header">
+                                            <div className="cita-card-icon">{dia}</div>
+                                            <div className="cita-card-date">
+                                                <p className="day">{fecha.toLocaleDateString('es-ES', { month: 'short', year: 'numeric' }).toUpperCase()}</p>
+                                                <p className="full-date">{formatFecha(cita.fecha)}</p>
+                                            </div>
                                         </div>
-                                        <p><strong>Fecha:</strong> {formatFecha(cita.fecha)}</p>
-                                        <p><strong>Hora:</strong> {cita.hora}</p>
-                                        <p><strong>Motivo:</strong> {cita.motivo}</p>
+                                        
+                                        <div className="user-info-card">
+                                            <p className="user-name">👤 {cita.usuario?.name || 'N/A'}</p>
+                                            <p className="user-email">✉️ {cita.usuario?.email || 'N/A'}</p>
+                                        </div>
 
-                                        <div className="button-group">
+                                        <div className="cita-card-body">
+                                            <div className="cita-card-time">{cita.hora}</div>
+                                            <p className="cita-card-motivo">
+                                                <strong>Motivo:</strong>
+                                                {cita.motivo}
+                                            </p>
+                                        </div>
+
+                                        <div className="cita-card-actions">
                                             <button 
                                                 onClick={() => handleEditClick(cita)}
                                                 disabled={loading}
                                                 className="btn-edit"
                                             >
-                                                Editar
+                                                ✏️ Editar
                                             </button>
                                             <button 
                                                 onClick={() => handleDeleteCita(cita._id)}
                                                 disabled={loading}
                                                 className="btn-delete"
                                             >
-                                                Eliminar
+                                                🗑️ Eliminar
                                             </button>
                                         </div>
-                                    </div>
+                                    </>
                                 )}
                             </div>
                         );
