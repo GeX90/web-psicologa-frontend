@@ -103,7 +103,7 @@ nav button:active {
 }
 
 nav span {
-    color: #5a7a92;
+    color: var(--color-primary);
     font-weight: 600;
     padding: 0 0.75rem;
     font-size: 0.9rem;
@@ -289,6 +289,8 @@ nav span {
         padding: 0 0.75rem;
     }
 }
+
+
 
 
 

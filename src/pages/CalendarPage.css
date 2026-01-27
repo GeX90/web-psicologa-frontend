@@ -55,7 +55,7 @@
 
 .calendar-subtitle {
   text-align: center;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 2rem;
@@ -118,7 +118,7 @@
   padding: 0.75rem 1rem;
   border: none;
   background: transparent;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: 10px;
@@ -168,7 +168,7 @@
 
 .btn-clear {
   background: var(--color-bg-main);
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   border: 2px solid #A8B8A0;
 }
 
@@ -337,7 +337,7 @@
 }
 
 .weekday {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-weight: 600;
   font-size: 0.9rem;
   text-align: center;
@@ -449,7 +449,7 @@
 
 .stat-label {
   font-size: 1rem;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-weight: 500;
 }
 
@@ -488,7 +488,7 @@
 .week-day-name {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -537,7 +537,7 @@
 
 .cita-motivo {
   font-size: 0.8rem;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -681,6 +681,8 @@
     right: 2px;
   }
 }
+
+
 
 
 

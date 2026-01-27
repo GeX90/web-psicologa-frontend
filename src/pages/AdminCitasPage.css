@@ -19,7 +19,7 @@
 }
 
 .admin-citas-header .subtitle {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 1rem;
   font-weight: 500;
 }
@@ -113,7 +113,7 @@
 .empty-state {
   text-align: center;
   padding: 3rem 1.5rem;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 1.1rem;
 }
 
@@ -188,7 +188,7 @@
 }
 
 .cita-card-date .day {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -222,7 +222,7 @@
 
 .user-info-card .user-email {
   margin: 0;
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
 }
 
@@ -234,7 +234,7 @@
 }
 
 .cita-card-time {
-  color: #5a7a92;
+  color: var(--color-primary);
   font-size: 1.25rem;
   font-weight: 700;
   display: flex;
@@ -248,14 +248,14 @@
 }
 
 .cita-card-motivo {
-  color: #6a7a8a;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
 }
 
 .cita-card-motivo strong {
-  color: #4a6a82;
+  color: var(--color-title);
   font-weight: 600;
   display: block;
   margin-bottom: 0.25rem;
@@ -418,6 +418,8 @@
     font-size: 2.5rem;
   }
 }
+
+
 
 
 

@@ -192,12 +192,12 @@
 
 .cita-card > .button-group button:last-of-type:hover:not(:disabled) {
   background: var(--color-bg-main);
-  border-color: #5B6B5E;
+  border-color: var(--color-text-secondary);
 }
 
 .no-editable-message {
   background: #fff3cd;
-  color: #856404;
+  color: #664d03;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ffeaa7;
@@ -250,6 +250,8 @@
     font-size: 0.95rem;
   }
 }
+
+
 
 
 

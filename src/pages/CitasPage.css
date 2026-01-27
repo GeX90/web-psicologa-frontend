@@ -21,7 +21,7 @@
 }
 
 .CitasPage-header .subtitle {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 1rem;
   font-weight: 500;
 }
@@ -50,7 +50,7 @@
 }
 
 .CitasPage-empty p {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 1.5rem 0;
@@ -191,14 +191,14 @@
 }
 
 .cita-card-motivo {
-  color: #6a7a8a;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
 }
 
 .cita-card-motivo strong {
-  color: #4a6a82;
+  color: var(--color-title);
   font-weight: 600;
   display: block;
   margin-bottom: 0.25rem;
@@ -278,6 +278,8 @@
     gap: 2rem;
   }
 }
+
+
 
 
 

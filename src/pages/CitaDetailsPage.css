@@ -36,7 +36,7 @@
 }
 
 .cita-details-subtitle {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   font-weight: 500;
   margin: 0;
@@ -83,7 +83,7 @@
 }
 
 .cita-detail-label {
-  color: #5B6B5E;
+  color: var(--color-text-secondary);
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -103,7 +103,7 @@
   font-weight: 400;
   line-height: 1.7;
   white-space: pre-wrap;
-  color: #6a7a8a;
+  color: var(--color-text-secondary);
 }
 
 .cita-details-actions {
@@ -136,7 +136,7 @@
 }
 
 .btn-volver {
-  background: #5B6B5E;
+  background: var(--color-text-secondary);
   color: white;
   box-shadow: 0 4px 12px rgba(91, 107, 94, 0.3);
 }
@@ -168,7 +168,7 @@
 
 .btn-delete-detail:hover {
   background: var(--color-bg-main);
-  border-color: #5B6B5E;
+  border-color: var(--color-text-secondary);
   color: #3f3f3a;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -207,6 +207,8 @@
     font-size: 2.25rem;
   }
 }
+
+
 
 
 
