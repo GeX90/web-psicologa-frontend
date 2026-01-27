@@ -68,7 +68,7 @@
   padding: 0.875rem 1rem;
   margin: 0;
   border: 2px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: 50px;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   transition: all 0.3s ease;
@@ -94,7 +94,7 @@
   background: var(--color-primary);
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
   font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;

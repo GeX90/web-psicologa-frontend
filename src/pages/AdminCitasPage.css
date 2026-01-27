@@ -28,7 +28,7 @@
   background: linear-gradient(135deg, var(--color-title) 0%, #006073 100%);
   color: white;
   padding: 1rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 50px;
   margin: 0 auto 2rem;
   max-width: 800px;
   display: flex;
@@ -64,7 +64,7 @@
   color: #3f3f3a;
   border: none;
   padding: 0.625rem 1.25rem;
-  border-radius: 12px;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -208,7 +208,7 @@
 .user-info-card {
   background: rgba(255, 255, 255, 0.6);
   padding: 0.875rem;
-  border-radius: 12px;
+  border-radius: 50px;
   margin-bottom: 1rem;
   border-left: 3px solid var(--color-primary);
 }
