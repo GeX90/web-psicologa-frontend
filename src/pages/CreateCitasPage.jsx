@@ -54,6 +54,8 @@ function CreateCitasPage() {
             const response = await axios.get(
                 `${API_URL}/api/citas/disponibilidad`
             );
+            console.log("Disponibilidad recibida:", response.data);
+            console.log("Total de horarios disponibles:", response.data.length);
             setDisponibilidad(response.data);
         } catch (error) {
             console.error("Error cargando disponibilidad:", error);
@@ -137,7 +139,7 @@ function CreateCitasPage() {
     const getHorariosDisponibles = (fecha) => {
         return disponibilidad.filter(disp => {
             const dispFecha = new Date(disp.fecha).toISOString().split('T')[0];
-            return dispFecha === fecha && disp.disponible;
+            return dispFecha === fecha;
         });
     };
 
@@ -151,6 +153,10 @@ function CreateCitasPage() {
     const handleDaySelect = (dia) => {
         const fecha = getFechaString(dia);
         const horariosDisp = getHorariosDisponibles(fecha);
+        
+        console.log("Día seleccionado:", dia);
+        console.log("Fecha:", fecha);
+        console.log("Horarios disponibles para esta fecha:", horariosDisp);
         
         if (horariosDisp.length === 0) {
             setError("No hay horarios disponibles para este día");
@@ -193,6 +199,7 @@ function CreateCitasPage() {
                     key={day}
                     className={`calendar-day ${!hasAvailability || isPast ? 'unavailable' : ''} ${selectedDate === fecha ? 'selected' : ''}`}
                     onClick={() => !isPast && hasAvailability && handleDaySelect(day)}
+                    style={{ cursor: !isPast && hasAvailability ? 'pointer' : 'not-allowed' }}
                 >
                     <span className="day-number">{day}</span>
                     {hasAvailability && !isPast && (
