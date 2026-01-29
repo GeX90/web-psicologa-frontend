@@ -51,14 +51,20 @@ function CreateCitasPage() {
 
     const cargarDisponibilidad = async () => {
         try {
+            console.log("Intentando cargar disponibilidad desde:", `${API_URL}/api/citas/disponibilidad`);
             const response = await axios.get(
-                `${API_URL}/api/citas/disponibilidad`
+                `${API_URL}/api/citas/disponibilidad`,
+                { timeout: 10000 } // 10 segundos timeout
             );
+            console.log("Respuesta recibida:", response.status);
             console.log("Disponibilidad recibida:", response.data);
             console.log("Total de horarios disponibles:", response.data.length);
             setDisponibilidad(response.data);
         } catch (error) {
-            console.error("Error cargando disponibilidad:", error);
+            console.error("Error cargando disponibilidad:");
+            console.error("- Mensaje:", error.message);
+            console.error("- Response:", error.response?.data);
+            console.error("- Status:", error.response?.status);
             // No mostrar error al usuario, solo usar array vacío
             setDisponibilidad([]);
         }
