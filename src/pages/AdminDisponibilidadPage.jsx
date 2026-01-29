@@ -19,6 +19,7 @@ function AdminDisponibilidadPage() {
   const navigate = useNavigate();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [disponibilidad, setDisponibilidad] = useState({});
+  const [selectedDay, setSelectedDay] = useState(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState(null);
@@ -62,9 +63,15 @@ function AdminDisponibilidadPage() {
       setDisponibilidad(dispObj);
     } catch (error) {
       console.error("Error cargando disponibilidad:", error);
+      showMessage('error', 'Error al cargar la disponibilidad');
     } finally {
       setLoading(false);
     }
+  };
+
+  const showMessage = (type, text) => {
+    setMessage({ type, text });
+    setTimeout(() => setMessage(null), 3000);
   };
 
   const toggleDisponibilidad = async (fecha, hora) => {
@@ -98,15 +105,11 @@ function AdminDisponibilidadPage() {
         ...prev,
         [key]: !nuevoEstado
       }));
+      showMessage('error', 'Error al actualizar la disponibilidad');
     }
   };
 
-  const marcarDiaCompleto = async (dia, disponible) => {
-    const year = currentDate.getFullYear();
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-    const dayStr = String(dia).padStart(2, '0');
-    const fecha = `${year}-${month}-${dayStr}`;
-
+  const marcarDiaCompleto = async (fecha, disponible) => {
     const horarios = HORARIOS_DISPONIBLES.map(hora => ({
       fecha,
       hora,
@@ -132,17 +135,10 @@ function AdminDisponibilidadPage() {
       });
       setDisponibilidad(newDisp);
       
-      setMessage({
-        type: 'success',
-        text: `Día ${dia} marcado como ${disponible ? 'disponible' : 'no disponible'}`
-      });
-      setTimeout(() => setMessage(null), 3000);
+      showMessage('success', `Día marcado como ${disponible ? 'disponible' : 'no disponible'}`);
     } catch (error) {
       console.error("Error actualizando día completo:", error);
-      setMessage({
-        type: 'error',
-        text: 'Error al actualizar la disponibilidad'
-      });
+      showMessage('error', 'Error al actualizar la disponibilidad');
     } finally {
       setSaving(false);
     }
@@ -161,10 +157,12 @@ function AdminDisponibilidadPage() {
 
   const previousMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+    setSelectedDay(null);
   };
 
   const nextMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+    setSelectedDay(null);
   };
 
   const contarHorasDisponibles = (dia) => {
@@ -179,9 +177,29 @@ function AdminDisponibilidadPage() {
     }).length;
   };
 
+  const getFechaString = (dia) => {
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const dayStr = String(dia).padStart(2, '0');
+    return `${year}-${month}-${dayStr}`;
+  };
+
+  const handleDayClick = (dia) => {
+    setSelectedDay(dia);
+  };
+
+  const isHoraDisponible = (hora) => {
+    if (!selectedDay) return false;
+    const fecha = getFechaString(selectedDay);
+    const key = `${fecha}_${hora}`;
+    return disponibilidad[key] === true;
+  };
+
   const renderCalendar = () => {
     const { daysInMonth, startingDayOfWeek } = getDaysInMonth();
     const days = [];
+    const today = new Date();
+    const todayStr = today.toISOString().split('T')[0];
 
     // Espacios en blanco
     for (let i = 0; i < startingDayOfWeek; i++) {
@@ -193,9 +211,16 @@ function AdminDisponibilidadPage() {
       const horasDisponibles = contarHorasDisponibles(day);
       const totalHoras = HORARIOS_DISPONIBLES.length;
       const porcentaje = (horasDisponibles / totalHoras) * 100;
+      const fechaStr = getFechaString(day);
+      const isToday = fechaStr === todayStr;
+      const isSelected = selectedDay === day;
 
       days.push(
-        <div key={day} className="disp-calendar-day">
+        <div 
+          key={day} 
+          className={`disp-calendar-day ${isSelected ? 'selected' : ''} ${isToday ? 'today' : ''}`}
+          onClick={() => handleDayClick(day)}
+        >
           <div className="day-header">
             <span className="day-number">{day}</span>
             <span className="hours-available">{horasDisponibles}/{totalHoras}</span>
@@ -205,27 +230,9 @@ function AdminDisponibilidadPage() {
               className="progress-bar" 
               style={{ 
                 width: `${porcentaje}%`,
-                backgroundColor: porcentaje === 100 ? '#28a745' : porcentaje > 0 ? '#ffc107' : '#dc3545'
+                backgroundColor: porcentaje === 100 ? 'var(--color-success)' : porcentaje > 0 ? 'var(--color-warning)' : 'var(--color-error)'
               }}
             />
-          </div>
-          <div className="day-actions">
-            <button
-              onClick={() => marcarDiaCompleto(day, true)}
-              disabled={saving}
-              className="btn-mark-available"
-              title="Marcar todo disponible"
-            >
-              ✓
-            </button>
-            <button
-              onClick={() => marcarDiaCompleto(day, false)}
-              disabled={saving}
-              className="btn-mark-unavailable"
-              title="Marcar todo no disponible"
-            >
-              ✗
-            </button>
           </div>
         </div>
       );
@@ -238,13 +245,16 @@ function AdminDisponibilidadPage() {
     return <Loader message="Cargando disponibilidad..." />;
   }
 
+  const selectedFecha = selectedDay ? getFechaString(selectedDay) : null;
+  const selectedDate = selectedDay ? new Date(currentDate.getFullYear(), currentDate.getMonth(), selectedDay) : null;
+
   return (
     <div className="AdminDisponibilidadPage">
       <div className="disp-container">
         <div className="disp-header">
           <h1>Gestión de Disponibilidad</h1>
           <p className="subtitle">
-            Define los horarios disponibles para que los pacientes puedan agendar citas
+            Selecciona un día y marca los horarios disponibles
           </p>
         </div>
 
@@ -254,53 +264,102 @@ function AdminDisponibilidadPage() {
           </div>
         )}
 
-        <div className="disp-calendar">
-          <div className="calendar-header">
-            <button onClick={previousMonth} className="calendar-nav">❮</button>
-            <h2 className="calendar-month">
-              {currentDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
-            </h2>
-            <button onClick={nextMonth} className="calendar-nav">❯</button>
-          </div>
+        <div className="disp-layout">
+          <div className="disp-calendar-section">
+            <div className="disp-calendar">
+              <div className="calendar-header">
+                <button onClick={previousMonth} className="calendar-nav">❮</button>
+                <h2 className="calendar-month">
+                  {currentDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
+                </h2>
+                <button onClick={nextMonth} className="calendar-nav">❯</button>
+              </div>
 
-          <div className="disp-legend">
-            <div className="legend-item">
-              <div className="legend-color available"></div>
-              <span>Completamente disponible</span>
+              <div className="calendar-weekdays">
+                <div>D</div>
+                <div>L</div>
+                <div>M</div>
+                <div>X</div>
+                <div>J</div>
+                <div>V</div>
+                <div>S</div>
+              </div>
+
+              <div className="disp-calendar-grid">
+                {renderCalendar()}
+              </div>
             </div>
-            <div className="legend-item">
-              <div className="legend-color partial"></div>
-              <span>Parcialmente disponible</span>
+
+            <div className="disp-legend">
+              <div className="legend-item">
+                <div className="legend-color available"></div>
+                <span>Completo</span>
+              </div>
+              <div className="legend-item">
+                <div className="legend-color partial"></div>
+                <span>Parcial</span>
+              </div>
+              <div className="legend-item">
+                <div className="legend-color unavailable"></div>
+                <span>No disponible</span>
+              </div>
             </div>
-            <div className="legend-item">
-              <div className="legend-color unavailable"></div>
-              <span>No disponible</span>
-            </div>
           </div>
 
-          <div className="calendar-weekdays">
-            <div>Dom</div>
-            <div>Lun</div>
-            <div>Mar</div>
-            <div>Mié</div>
-            <div>Jue</div>
-            <div>Vie</div>
-            <div>Sáb</div>
-          </div>
+          <div className="horarios-section">
+            {selectedDay ? (
+              <>
+                <div className="horarios-header">
+                  <h3>
+                    {selectedDate.toLocaleDateString('es-ES', { 
+                      weekday: 'long', 
+                      day: 'numeric', 
+                      month: 'long' 
+                    })}
+                  </h3>
+                  <div className="day-actions-compact">
+                    <button
+                      onClick={() => marcarDiaCompleto(selectedFecha, true)}
+                      disabled={saving}
+                      className="btn-mark-all available"
+                      title="Marcar todo disponible"
+                    >
+                      Todos disponible
+                    </button>
+                    <button
+                      onClick={() => marcarDiaCompleto(selectedFecha, false)}
+                      disabled={saving}
+                      className="btn-mark-all unavailable"
+                      title="Marcar todo no disponible"
+                    >
+                      Todos no disponible
+                    </button>
+                  </div>
+                </div>
 
-          <div className="disp-calendar-grid">
-            {renderCalendar()}
+                <div className="horarios-grid">
+                  {HORARIOS_DISPONIBLES.map(hora => {
+                    const disponible = isHoraDisponible(hora);
+                    return (
+                      <button
+                        key={hora}
+                        className={`horario-btn ${disponible ? 'disponible' : 'no-disponible'}`}
+                        onClick={() => toggleDisponibilidad(selectedFecha, hora)}
+                        disabled={saving}
+                      >
+                        {hora}
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            ) : (
+              <div className="no-selection">
+                <div className="no-selection-icon">📅</div>
+                <p>Selecciona un día del calendario para gestionar sus horarios</p>
+              </div>
+            )}
           </div>
-        </div>
-
-        <div className="instructions">
-          <h3>Instrucciones:</h3>
-          <ul>
-            <li>✓ = Marcar todo el día como disponible</li>
-            <li>✗ = Marcar todo el día como no disponible</li>
-            <li>Los pacientes solo verán los horarios que marques como disponibles</li>
-            <li>Por defecto, todos los horarios están NO disponibles</li>
-          </ul>
         </div>
       </div>
     </div>
