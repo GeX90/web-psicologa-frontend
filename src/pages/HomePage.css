@@ -29,7 +29,7 @@
    ========================================== */
 .home-hero {
     width: 100%;
-    background: linear-gradient(135deg, var(--color-bg-section) 0%, rgba(199, 217, 207, 0.7) 100%);
+    background: var(--color-bg-section);
     padding: 3rem 2rem;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
@@ -150,9 +150,9 @@
 }
 
 .quick-action-card.next-appointment {
-    background: linear-gradient(135deg, rgba(191, 218, 213, 0.6) 0%, rgba(168, 184, 160, 0.5) 100%);
-    color: #3f3f3a;
-    border: 1px solid rgba(191, 218, 213, 0.5);
+    background: var(--color-primary);
+    color: white;
+    border: 1px solid var(--color-primary);
 }
 
 .quick-action-card.empty-state {
@@ -357,17 +357,17 @@
 
 /* Próxima Cita Card */
 .next-appointment-card {
-    background: linear-gradient(135deg, rgba(191, 218, 213, 0.6) 0%, rgba(168, 184, 160, 0.5) 100%);
+    background: var(--color-primary);
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(191, 218, 213, 0.4);
+    border: 1px solid var(--color-primary);
 }
 
 .next-appointment-card h4 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #3f3f3a;
+    color: white;
     margin: 0 0 1rem 0;
 }
 
@@ -421,7 +421,7 @@
 }
 
 .admin-card {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-title) 100%);
+    background: var(--color-primary);
     color: white;
     border-radius: 20px;
     padding: 1.5rem;
@@ -432,7 +432,7 @@
 }
 
 .admin-card.primary {
-    background: linear-gradient(135deg, var(--color-title) 0%, var(--color-primary) 100%);
+    background: var(--color-primary);
 }
 
 .admin-card:hover {

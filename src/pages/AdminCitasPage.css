@@ -25,7 +25,7 @@
 }
 
 .filter-info {
-  background: linear-gradient(135deg, var(--color-title) 0%, #006073 100%);
+  background: var(--color-primary);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 50px;
@@ -145,7 +145,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-title) 0%, var(--color-bg-section) 100%);
+  background: var(--color-primary);
   opacity: 0;
   transition: opacity 0.3s ease;
 }

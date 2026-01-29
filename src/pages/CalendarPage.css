@@ -6,7 +6,7 @@
 .CalendarPage {
   min-height: calc(100vh - 80px);
   padding: 6rem 1.5rem 2rem;
-  background: linear-gradient(135deg, rgba(191, 218, 213, 0.15) 0%, rgba(168, 184, 160, 0.1) 100%);
+  background: var(--color-bg-main);
 }
 
 .calendar-page-container {

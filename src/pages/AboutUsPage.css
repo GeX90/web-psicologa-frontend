@@ -3,7 +3,7 @@
    ========================================== */
 
 .AboutUsPage {
-    background: linear-gradient(135deg, rgba(191, 218, 213, 0.2) 0%, rgba(168, 184, 160, 0.15) 100%);
+    background: var(--color-bg-main);
     min-height: 100vh;
     padding-top: 6rem;
     padding-bottom: 2rem;

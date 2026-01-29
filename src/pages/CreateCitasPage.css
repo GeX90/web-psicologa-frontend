@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   padding: 3rem 1.5rem;
-  background: linear-gradient(135deg, rgba(191, 218, 213, 0.2) 0%, rgba(168, 184, 160, 0.15) 100%);
+  background: var(--color-bg-main);
 }
 
 .create-citas-container h1 {
