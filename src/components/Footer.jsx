@@ -24,16 +24,14 @@ function Footer() {
         <div className="footer-section">
           <h4>Contacto</h4>
           <p>Email: info@neuroespacios.com</p>
-          <p>Teléfono: +34 600 123 456</p>
+          <p>Teléfono: +34 623 054 187</p>
           <p>Horario: Lun-Vie 9:00 - 20:00</p>
         </div>
 
         <div className="footer-section">
           <h4>Síguenos</h4>
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://www.instagram.com/beatrizdemergelina?igsh=MXAwMTJheml5bDg5bg==" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </div>
       </div>
