@@ -23,7 +23,7 @@ function Footer() {
 
         <div className="footer-section">
           <h4>Contacto</h4>
-          <p>Email: info@neuroespacios.com</p>
+          <p>Email: bdmm1993nps@gmail.com</p>
           <p>Teléfono: +34 623 054 187</p>
           <p>Horario: Lun-Vie 9:00 - 20:00</p>
         </div>
