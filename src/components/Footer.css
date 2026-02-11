@@ -23,7 +23,7 @@
 
 .footer-section h3 {
     color: var(--color-title);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -109,7 +109,7 @@
     }
 
     .footer-section h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .footer-section h4 {
@@ -135,7 +135,7 @@
     }
 
     .footer-section h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .footer-section h4 {

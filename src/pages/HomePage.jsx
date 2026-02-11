@@ -77,7 +77,7 @@ function HomePage() {
                 {/* Hero Section - Solo para usuarios no admin */}
                 {!isAdmin && (
                     <header className="home-hero">
-                        <h1 className="neuro-espacio-title">NEURO ESPACIO</h1>
+                        <h1 className="neuro-espacio-title">BEATRIZ DE MERGELINA</h1>
                         <h2 className="home-main-message">Psicología para tu Bienestar</h2>
                         <p className="home-subtitle">Acompañamiento profesional y cercano</p>
                         
@@ -217,29 +217,29 @@ function HomePage() {
                 <section className="professional-section">
                     <div className="professional-card">
                         <div className="professional-image">
-                            <img src="/psicologaejemplo.jpg" alt="Psicóloga Profesional" />
+                            <img src="/Beaprofileweb.png" alt="Psicóloga Profesional" />
                         </div>
                         <div className="professional-info">
-                            <h3 className="professional-name">Dra. María Fernández</h3>
+                            <h3 className="professional-name">Beatriz de Mergelina</h3>
                             <p className="professional-title">Psicóloga Clínica y Neuropsicóloga</p>
                             
                             <div className="professional-specialties">
                                 <div className="specialty-tags">
+                                    <span className="specialty-tag">Daño Cerebral</span>
+                                    <span className="specialty-tag">Neurodegenerativas</span>
+                                    <span className="specialty-tag">Gestión Emocional</span>
                                     <span className="specialty-tag">Ansiedad</span>
-                                    <span className="specialty-tag">Estrés</span>
-                                    <span className="specialty-tag">Autoestima</span>
                                     <span className="specialty-tag">Depresión</span>
+                                    <span className="specialty-tag">Acompañamiento Familiar</span>
                                 </div>
                             </div>
 
                             <p className="professional-bio">
-                                Hola, soy María. Durante más de 10 años he acompañado a personas en sus procesos 
-                                de cambio y crecimiento personal. Mi enfoque combina la psicología clínica con 
-                                la neuropsicología para ofrecer un tratamiento integral y personalizado.
+                                Hola! Soy Beatriz de Mergelina, psicóloga y neuropsicóloga clínica. Mi trayectoria profesional se ha desarrollado en el ámbito del daño cerebral adquirido, las enfermedades neurodegenerativas y el acompañamiento familiar. En los últimos años he profundizado especialmente en gestión emocional, ansiedad, depresión y tolerancia a la frustración. Mi propósito en terapia es ofrecer un entorno acogedor, sereno y sin valoraciones, donde puedas entender con mayor profundidad lo que te sucede y descubrir recursos que te permitan seguir adelante con más lucidez y equilibrio.
                             </p>
                             
                             <Link to="/about" className="btn-learn-more">
-                                Conoce más sobre Neuro Espacio
+                                Conoce más sobre Beatriz de Mergelina
                             </Link>
                         </div>
                     </div>
@@ -251,27 +251,27 @@ function HomePage() {
                     
                     <div className="services-grid">
                         <div className="service-card">
-                            <div className="service-icon">😟</div>
-                            <h4>Ansiedad y Estrés</h4>
-                            <p>Técnicas efectivas para recuperar tu tranquilidad y bienestar.</p>
-                        </div>
-
-                        <div className="service-card">
-                            <div className="service-icon">💪</div>
-                            <h4>Autoestima</h4>
-                            <p>Fortalece tu confianza y alcanza tu máximo potencial.</p>
-                        </div>
-
-                        <div className="service-card">
-                            <div className="service-icon">💔</div>
-                            <h4>Estado de Ánimo</h4>
-                            <p>Recupera tu energía y disfruta de nuevo de la vida.</p>
-                        </div>
-
-                        <div className="service-card">
                             <div className="service-icon">🧠</div>
-                            <h4>Neuropsicología</h4>
-                            <p>Evaluación y rehabilitación de funciones cognitivas.</p>
+                            <h4>Daño Cerebral y Neurodegenerativas</h4>
+                            <p>Evaluación, rehabilitación y acompañamiento en daño cerebral y enfermedades neurodegenerativas.</p>
+                        </div>
+
+                        <div className="service-card">
+                            <div className="service-icon">💙</div>
+                            <h4>Gestión Emocional</h4>
+                            <p>Explorar y comprender tus emociones para avanzar con mayor equilibrio.</p>
+                        </div>
+
+                        <div className="service-card">
+                            <div className="service-icon">😟</div>
+                            <h4>Ansiedad y Depresión</h4>
+                            <p>Acompañamiento cercano para recuperar tu tranquilidad y bienestar emocional.</p>
+                        </div>
+
+                        <div className="service-card">
+                            <div className="service-icon">👨‍👩‍👧‍👦</div>
+                            <h4>Acompañamiento Familiar</h4>
+                            <p>Apoyo a familias en procesos complejos, parte fundamental de la terapia.</p>
                         </div>
                     </div>
 

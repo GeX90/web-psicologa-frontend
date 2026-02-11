@@ -27,8 +27,8 @@ function Navbar() {
   return (
     <nav>
       <Link to="/" className="navbar-brand">
-        <img src="/icononeuroespacio.png" alt="Neuro Espacio Logo" className="navbar-logo" />
-        <span className="navbar-title">NEURO ESPACIO</span>
+        <img src="/icononeuroespacio.png" alt="Beatriz de Mergelina Logo" className="navbar-logo" />
+        <span className="navbar-title">BEATRIZ DE MERGELINA</span>
       </Link>
 
       <button className="navbar-burger" onClick={toggleMenu} aria-label="Menu">
@@ -77,7 +77,7 @@ function Navbar() {
         )}
 
         <Link to="/about" onClick={closeMenu} className="nav-link">
-          Sobre Nosotros
+          Sobre Mí
         </Link>
       </div>
 

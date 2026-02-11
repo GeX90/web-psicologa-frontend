@@ -4,39 +4,31 @@ function AboutUsPage() {
   return (
     <div className="AboutUsPage">
       <div className="about-container">
-        <h1>Sobre Nosotros</h1>
+        <h1>Sobre Mí</h1>
         <p>
-          En Neuro Espacio, nos dedicamos a proporcionar servicios de salud mental de alta calidad
-          y accesible para todos. Nuestro equipo de profesionales especializados está comprometido
-          con tu bienestar y desarrollo personal.
+          Hola! Soy Beatriz de Mergelina, psicóloga y neuropsicóloga clínica.
+          Desde siempre me ha movido una mezcla de curiosidad y vocación: entender cómo pensamos, sentimos y nos adaptamos, y poder acompañar a las personas en momentos complejos de su vida.
         </p>
 
-        <h2>Nuestra Misión</h2>
+        <h2>Mi Trayectoria</h2>
         <p>
-          Ofrecer un espacio seguro y confidencial donde puedas explorar tus emociones,
-          resolver conflictos internos y crecer como persona con el apoyo de profesionales
-          calificados.
+          Mi trayectoria profesional se ha desarrollado en el ámbito del daño cerebral adquirido, las enfermedades neurodegenerativas y los casos de infarto juvenil, trabajando tanto con las personas afectadas como con sus familias. Estas experiencias me han enseñado la importancia de un acompañamiento cercano, humano y respetuoso.
         </p>
 
-        <h2>Nuestros Valores</h2>
-        <ul>
-          <li><strong>Confidencialidad:</strong> Tu privacidad es sagrada para nosotros</li>
-          <li><strong>Profesionalismo:</strong> Contamos con especialistas altamente capacitados</li>
-          <li><strong>Empatía:</strong> Nos importa genuinamente tu bienestar</li>
-          <li><strong>Accesibilidad:</strong> Queremos que todos tengan acceso a salud mental de calidad</li>
-        </ul>
-
-        <h2>¿Por qué elegirnos?</h2>
+        <h2>Áreas de Especialización</h2>
         <p>
-          Contamos con años de experiencia en el campo de la psicología y la salud mental.
-          Nuestro enfoque es personalizado, adaptando cada sesión a tus necesidades específicas.
-          Creemos en un ambiente de confianza y respeto mutuo.
+          En los últimos años he profundizado especialmente en gestión emocional, ansiedad, depresión y tolerancia a la frustración, además del acompañamiento familiar, que considero una parte fundamental del proceso terapéutico.
+          También siento un especial interés por el neurodesarrollo y las divergencias, áreas en las que sigo formándome con mucha ilusión.
+        </p>
+
+        <h2>Mi Enfoque Terapéutico</h2>
+        <p>
+          Mi propósito en terapia es ofrecer un entorno acogedor, sereno y sin valoraciones, donde puedas entender con mayor profundidad lo que te sucede, explorar tus emociones con tranquilidad y descubrir recursos que te permitan seguir adelante con más lucidez y equilibrio.
         </p>
 
         <h2>Contacto</h2>
         <p>
-          ¿Tienes preguntas? No dudes en contactarnos. Estamos aquí para ayudarte en tu
-          camino hacia el bienestar mental.
+          ¿Tienes preguntas o quieres agendar una consulta? No dudes en contactarme. Estoy aquí para acompañarte en tu camino hacia el bienestar.
         </p>
 
         <h2>Web Developer</h2>

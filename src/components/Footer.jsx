@@ -8,15 +8,15 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>NEURO ESPACIO</h3>
-          <p>Tu espacio seguro para el bienestar mental y emocional.</p>
+          <h3>BEATRIZ DE MERGELINA</h3>
+          <p>Un entorno acogedor y sereno para tu bienestar emocional.</p>
         </div>
 
         <div className="footer-section">
           <h4>Navegación</h4>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/about">Sobre Nosotros</Link></li>
+            <li><Link to="/about">Sobre Mí</Link></li>
             <li><Link to="/signup">Pedir Cita</Link></li>
           </ul>
         </div>
@@ -39,7 +39,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Neuro Espacio. Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} Beatriz de Mergelina. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
