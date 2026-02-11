@@ -81,16 +81,18 @@
   font-weight: 500;
   cursor: default;
   transition: all 0.3s ease;
-  background: var(--color-bg-main);
-  color: var(--color-text-muted);
+  background: var(--color-bg-hover);
+  color: var(--color-text-main);
   position: relative;
   padding: 0.25rem;
   box-sizing: border-box;
   min-width: 0;
+  border: 1px solid var(--color-border);
 }
 
 .calendar-day.empty {
   background: transparent;
+  border: none;
 }
 
 .calendar-day.unavailable {
