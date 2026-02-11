@@ -6,14 +6,14 @@
 
 .edit-citas-container h1 {
   text-align: center;
-  color: #3f3f3a;
+  color: var(--color-title);
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
 
 .edit-citas-container > p {
   text-align: center;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1.2rem;
   margin-top: 40px;
 }
@@ -40,7 +40,7 @@
 }
 
 .cita-card {
-  background: white;
+  background: var(--color-bg-card);
   border-radius: 50px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -52,7 +52,7 @@
 }
 
 .cita-card h3 {
-  color: #3f3f3a;
+  color: var(--color-title);
   font-size: 1.5rem;
   margin-bottom: 16px;
   border-bottom: 2px solid var(--color-bg-section);
@@ -64,7 +64,7 @@
 }
 
 .cita-info p {
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1rem;
   margin: 10px 0;
   display: flex;
@@ -73,7 +73,7 @@
 }
 
 .cita-info strong {
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-weight: 600;
   min-width: 100px;
 }
@@ -83,7 +83,7 @@
 }
 
 .edit-form h3 {
-  color: #3f3f3a;
+  color: var(--color-title);
   margin-bottom: 20px;
 }
 
@@ -93,7 +93,7 @@
 
 .form-group label {
   display: block;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 8px;
@@ -123,8 +123,8 @@
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #3f3f3a;
-  box-shadow: 0 0 0 3px rgba(74, 86, 50, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(15, 124, 140, 0.15);
 }
 
 .button-group {
@@ -162,9 +162,9 @@
 }
 
 .button-group button:last-child {
-  background: white;
-  color: #3f3f3a;
-  border: 2px solid #3f3f3a;
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 2px solid var(--color-border);
 }
 
 .button-group button:last-child:hover:not(:disabled) {
@@ -185,8 +185,8 @@
 }
 
 .cita-card > .button-group button:last-of-type {
-  background: white;
-  color: #3f3f3a;
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
   border: 2px solid var(--color-bg-section);
 }
 

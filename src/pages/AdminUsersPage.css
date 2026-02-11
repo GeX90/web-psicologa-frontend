@@ -6,14 +6,14 @@
 
 .admin-users-container h1 {
   text-align: center;
-  color: #3f3f3a;
+  color: var(--color-title);
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 .admin-users-container .subtitle {
   text-align: center;
-  color: #3f3f3a;
+  color: var(--color-text-secondary);
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 40px;
@@ -22,7 +22,7 @@
 .users-table-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: white;
+  background: var(--color-bg-card);
   border-radius: 50px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@
 
 .users-table td {
   padding: 15px;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 0.95rem;
 }
 
@@ -76,7 +76,7 @@
 
 .role-badge.user {
   background: var(--color-bg-section);
-  color: #3f3f3a;
+  color: var(--color-text-main);
 }
 
 .action-buttons {

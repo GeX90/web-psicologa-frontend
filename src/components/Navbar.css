@@ -132,7 +132,7 @@ nav span {
 }
 
 .navbar-burger:hover .burger-line {
-    background: white;
+    background: var(--color-text-on-primary);
 }
 
 .burger-line {
@@ -181,7 +181,7 @@ nav span {
         top: 60px;
         left: 0;
         width: 100%;
-        background: white;
+        background: var(--navbar-bg);
         flex-direction: column;
         padding: 1rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

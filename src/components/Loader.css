@@ -24,7 +24,7 @@
 
 .loader-message {
   margin-top: 1.5rem;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1.05rem;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;

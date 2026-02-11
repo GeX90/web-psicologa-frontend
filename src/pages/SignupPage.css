@@ -18,7 +18,7 @@
 }
 
 .SignupPage h1 {
-  color: #3f3f3a;
+  color: var(--color-title);
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -31,7 +31,7 @@
 .SignupPage form {
   width: 100%;
   max-width: 460px;
-  background: white;
+  background: var(--color-bg-card);
   border-radius: 16px;
   padding: 1.5rem 1.25rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
@@ -41,7 +41,7 @@
 
 .SignupPage label {
   display: block;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
@@ -69,8 +69,8 @@
 
 .SignupPage input:focus {
   outline: none;
-  border-color: #3f3f3a;
-  box-shadow: 0 0 0 4px rgba(74, 86, 50, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(15, 124, 140, 0.15);
 }
 
 .password-input-wrapper {
@@ -105,7 +105,7 @@
 }
 
 .password-toggle-btn:hover {
-  color: #3f3f3a;
+  color: var(--color-text-main);
   transform: none;
   box-shadow: none !important;
 }

@@ -10,7 +10,7 @@
 }
 
 .admin-citas-header h1 {
-  color: #3f3f3a;
+  color: var(--color-title);
   font-size: 2.25rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
@@ -60,8 +60,8 @@
 }
 
 .btn-clear-filter {
-  background: white;
-  color: #3f3f3a;
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
   border: none;
   padding: 0.625rem 1.25rem;
   border-radius: 50px;
@@ -73,7 +73,7 @@
 }
 
 .btn-clear-filter:hover {
-  background: #f0f0f0;
+  background: var(--color-bg-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -92,7 +92,7 @@
 
 .admin-citas-container > p {
   text-align: center;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1.2rem;
   margin-top: 40px;
 }
@@ -153,7 +153,7 @@
 .cita-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 28px rgba(74, 86, 50, 0.15);
-  border-color: #3f3f3a;
+  border-color: var(--color-primary);
 }
 
 .cita-card:hover::before {
@@ -177,7 +177,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #3f3f3a;
+  color: var(--color-primary);
   font-size: 1.75rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -197,7 +197,7 @@
 }
 
 .cita-card-date .full-date {
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
@@ -215,7 +215,7 @@
 
 .user-info-card .user-name {
   margin: 0 0 0.5rem 0;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -274,7 +274,7 @@
 }
 
 .edit-form h3 {
-  color: #3f3f3a;
+  color: var(--color-title);
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
 }
@@ -289,7 +289,7 @@
 
 .user-info-edit p {
   margin: 0.25rem 0;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 0.9rem;
 }
 
@@ -299,7 +299,7 @@
 
 .form-group label {
   display: block;
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -321,8 +321,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #3f3f3a;
-  box-shadow: 0 0 0 3px rgba(74, 86, 50, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(15, 124, 140, 0.15);
 }
 
 .form-group textarea {

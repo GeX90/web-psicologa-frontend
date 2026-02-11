@@ -14,7 +14,7 @@
 .cita-details-container {
   width: 100%;
   max-width: 700px;
-  background: white;
+  background: var(--color-bg-card);
   border-radius: 24px;
   padding: 2rem 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -29,7 +29,7 @@
 }
 
 .cita-details-header h2 {
-  color: #3f3f3a;
+  color: var(--color-title);
   font-size: 1.75rem;
   margin: 0 0 0.5rem 0;
   font-weight: 700;
@@ -61,7 +61,7 @@
 
 .cita-detail-item:hover {
   background: var(--color-bg-section);
-  border-left-color: #3f3f3a;
+  border-left-color: var(--color-primary);
   transform: translateX(4px);
 }
 
@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #3f3f3a;
+  color: var(--color-primary);
   flex-shrink: 0;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .cita-detail-value {
-  color: #3f3f3a;
+  color: var(--color-text-main);
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
@@ -160,16 +160,16 @@
 }
 
 .btn-delete-detail {
-  background: white;
-  color: #3f3f3a;
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
   border: 2px solid var(--color-bg-section);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .btn-delete-detail:hover {
-  background: var(--color-bg-main);
+  background: var(--color-bg-hover);
   border-color: var(--color-text-secondary);
-  color: #3f3f3a;
+  color: var(--color-text-main);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
