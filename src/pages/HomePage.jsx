@@ -42,7 +42,7 @@ function HomePage() {
         if (isLoggedIn && user && !isAdmin) {
             const storedToken = localStorage.getItem('authToken');
             
-            axios.get(`${API_URL}/citas`, {
+            axios.get(`${API_URL}/api/citas`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             })
             .then(response => {
