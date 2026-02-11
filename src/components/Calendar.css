@@ -45,9 +45,19 @@
   line-height: 1;
 }
 
+.calendar-nav svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+
 .calendar-nav:hover {
   background: #0d6875;
   transform: scale(1.05);
+}
+
+.calendar-nav:active {
+  transform: scale(0.95);
 }
 
 .calendar-weekdays {
