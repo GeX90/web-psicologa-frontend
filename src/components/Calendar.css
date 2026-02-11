@@ -60,6 +60,15 @@
   transform: scale(0.95);
 }
 
+.calendar-nav:focus {
+  outline: none;
+}
+
+.calendar-nav:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);

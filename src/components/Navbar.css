@@ -121,6 +121,19 @@ nav button:active {
     transform: translateY(0);
 }
 
+.nav-link:focus,
+.nav-btn:focus,
+nav button:focus {
+    outline: none;
+}
+
+.nav-link:focus-visible,
+.nav-btn:focus-visible,
+nav button:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
 nav span {
     color: var(--color-primary);
     font-weight: 600;
@@ -152,6 +165,15 @@ nav span {
 
 .navbar-burger:hover .burger-line {
     background: var(--color-text-on-primary);
+}
+
+.navbar-burger:focus {
+    outline: none;
+}
+
+.navbar-burger:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .burger-line {
