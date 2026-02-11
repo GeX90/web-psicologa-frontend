@@ -16,8 +16,11 @@ function Navbar() {
   
   const [menuOpen, setMenuOpen] = useState(false);
   
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
     setMenuOpen(!menuOpen);
+    if (e?.currentTarget) {
+      e.currentTarget.blur();
+    }
   };
   
   const closeMenu = () => {
@@ -83,7 +86,7 @@ function Navbar() {
 
       <div className="navbar-user-actions">
         <button 
-          onClick={toggleTheme}
+          onClick={(e) => { toggleTheme(); e.currentTarget.blur(); }}
           className="theme-toggle-btn"
           aria-label={theme === "light" ? "Activar modo oscuro" : "Activar modo claro"}
           title={theme === "light" ? "Activar modo oscuro" : "Activar modo claro"}
@@ -110,7 +113,7 @@ function Navbar() {
         {isLoggedIn && (
           <>
             <span>{user && user.name}</span>
-            <button onClick={() => { logOutUser(); closeMenu(); }}>Cerrar Sesión</button>
+            <button onClick={(e) => { logOutUser(); closeMenu(); e.currentTarget.blur(); }}>Cerrar Sesión</button>
           </>
         )}
 

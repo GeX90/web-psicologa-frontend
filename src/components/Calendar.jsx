@@ -109,12 +109,18 @@ function Calendar() {
     }
   };
 
-  const previousMonth = () => {
+  const previousMonth = (e) => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+    if (e?.currentTarget) {
+      e.currentTarget.blur();
+    }
   };
 
-  const nextMonth = () => {
+  const nextMonth = (e) => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+    if (e?.currentTarget) {
+      e.currentTarget.blur();
+    }
   };
 
   const renderCalendar = () => {

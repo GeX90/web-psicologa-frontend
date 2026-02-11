@@ -8,9 +8,14 @@ import "./ThemeToggle.css";
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 
+  const handleClick = (e) => {
+    toggleTheme();
+    e.currentTarget.blur(); // Remove focus after click
+  };
+
   return (
     <button
-      onClick={toggleTheme}
+      onClick={handleClick}
       className="theme-toggle-button"
       aria-label={theme === "light" ? "Activar modo oscuro" : "Activar modo claro"}
       title={theme === "light" ? "Cambiar a modo oscuro" : "Cambiar a modo claro"}
