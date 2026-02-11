@@ -203,7 +203,12 @@ function CreateCitasPage() {
             const fecha = getFechaString(day);
             const horariosDisp = getHorariosDisponibles(fecha);
             const hasAvailability = horariosDisp.length > 0;
-            const isPast = new Date(fecha) < new Date(new Date().setHours(0, 0, 0, 0));
+            
+            // Comparar fechas correctamente en timezone local
+            const fechaDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const isPast = fechaDay < today;
 
             days.push(
                 <div
