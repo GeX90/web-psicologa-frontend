@@ -40,13 +40,16 @@ function Calendar() {
 
       // Agrupar por fecha para saber qué días tienen al menos un horario disponible
       const dispPorFecha = {};
-      response.data.forEach(item => {
-        const fecha = new Date(item.fecha).toISOString().split('T')[0];
-        if (!dispPorFecha[fecha]) {
-          dispPorFecha[fecha] = [];
-        }
-        dispPorFecha[fecha].push(item.hora);
-      });
+      if (Array.isArray(response.data)) {
+        response.data.forEach(item => {
+          const fecha = new Date(item.fecha).toISOString().split('T')[0];
+          if (!dispPorFecha[fecha]) {
+            dispPorFecha[fecha] = [];
+          }
+          dispPorFecha[fecha].push(item.hora);
+        });
+      }
+
 
       setDisponibilidad(dispPorFecha);
     } catch (error) {
