@@ -10,6 +10,7 @@ function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [disponibilidad, setDisponibilidad] = useState({});
   const [loading, setLoading] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
   const { isLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -54,6 +55,7 @@ function Calendar() {
       setDisponibilidad({});
     } finally {
       setLoading(false);
+      setInitialLoad(false);
     }
   };
 
@@ -145,9 +147,16 @@ function Calendar() {
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
   ];
 
+  if (initialLoad && loading) {
+    return (
+      <div className="calendar-container">
+        <div className="calendar-loading">Cargando disponibilidad...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="calendar-container">
-      {loading && <div className="calendar-loading-overlay">Actualizando...</div>}
       <div className="calendar-header">
         <button onClick={previousMonth} className="calendar-nav">←</button>
         <h2 className="calendar-month">
