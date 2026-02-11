@@ -32,7 +32,7 @@
   background: var(--color-primary);
   color: white;
   border: none;
-  padding: 0.75rem 1.25rem;
+  padding: 0;
   border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
@@ -40,7 +40,9 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  min-width: 44px;
+  width: 46px;
+  height: 46px;
+  line-height: 1;
 }
 
 .calendar-nav:hover {
