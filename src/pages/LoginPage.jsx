@@ -32,7 +32,9 @@ function LoginPage(props) {
     setErrorMessage(undefined);
     const requestBody = { email, password };
 
-    axios.post(`${API_URL}/auth/login`, requestBody)
+    axios.post(`${API_URL}/auth/login`, requestBody, {
+      withCredentials: true
+    })
       .then((response) => {
         console.log('JWT token', response.data.authToken );
       
@@ -48,7 +50,8 @@ function LoginPage(props) {
         const storedToken = localStorage.getItem('authToken');
         
         return axios.get(`${API_URL}/auth/verify`, {
-          headers: { Authorization: `Bearer ${storedToken}` }
+          headers: { Authorization: `Bearer ${storedToken}` },
+          withCredentials: true
         });
       })
       .then((verifyResponse) => {
@@ -63,7 +66,8 @@ function LoginPage(props) {
         // If user is not admin, check if they have appointments
         const storedToken = localStorage.getItem('authToken');
         return axios.get(`${API_URL}/api/citas`, {
-          headers: { Authorization: `Bearer ${storedToken}` }
+          headers: { Authorization: `Bearer ${storedToken}` },
+          withCredentials: true
         })
         .then((citasResponse) => {
           // Redirect based on whether user has appointments
