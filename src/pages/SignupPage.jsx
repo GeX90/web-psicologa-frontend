@@ -32,12 +32,14 @@ function SignupPage(props) {
     // Make an axios request to the API
     // If the POST request is a successful redirect to the login page
     // If the request resolves with an error, set the error message in the state
-    axios.post(`${API_URL}/auth/signup`, requestBody)
+    axios.post(`${API_URL}/auth/signup`, requestBody, {
+      withCredentials: true
+    })
       .then((response) => {
         navigate('/login');
       })
       .catch((error) => {
-        const errorDescription = error.response.data.message;
+        const errorDescription = error.response?.data?.message || "Error al crear la cuenta. Verifica tu conexión.";
         setErrorMessage(errorDescription);
       })
       .finally(() => {
