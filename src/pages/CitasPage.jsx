@@ -71,7 +71,7 @@ function CitasPage() {
                     <div className="CitasPage-empty-icon">📅</div>
                     <h2>No tienes citas programadas</h2>
                     <p>Comienza a gestionar tu salud mental reservando tu primera cita</p>
-                    <Link to="/crear-cita" className="btn-create">Crear Nueva Cita</Link>
+                    <Link to="/citas/create" className="btn-create">Crear Nueva Cita</Link>
                 </div>
             ) : (
                 <div className="citas-grid">

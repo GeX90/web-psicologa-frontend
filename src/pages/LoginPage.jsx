@@ -74,7 +74,7 @@ function LoginPage(props) {
           if (citasResponse.data && citasResponse.data.length > 0) {
             navigate('/citas');
           } else {
-            navigate('/crear-cita');
+            navigate('/citas/create');
           }
         });
       })
